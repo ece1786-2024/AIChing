@@ -1,66 +1,581 @@
 {
-    "蛊": "蛊：元亨，利涉大川。先甲三日，后甲三日。\n初六：干父之蛊，有子，考无咎，厉终吉。\n九二：干母之蛊，不可贞。\n九三：干父之蛊，小有悔，无大咎。\n六四：裕父之蛊，往见吝。\n六五：干父之蛊，用誉。\n上九：不事王侯，高尚其事。\n",
-    "恒": "恒：亨，无咎，利贞，利有攸往。\n初六：浚恒，贞凶，无攸利。\n九二：悔亡。\n九三：不恒其德，或承之羞，贞吝。\n九四：田无禽。\n六五：恒其德，贞，妇人吉，夫子凶。\n上六：振恒，凶。\n",
-    "萃": "萃：亨。王假有庙，利见大人，亨，利贞。用大牲吉，利有攸往。\n初六：有孚不终，乃乱乃萃，若号一握为笑，勿恤，往无咎。\n六二：引吉，无咎，孚乃利用禴。\n六三：萃如，嗟如，无攸利，往无咎，小吝。\n九四：大吉，无咎。\n九五：萃有位，无咎。匪孚，元永贞，悔亡。\n上六：赍咨涕洟，无咎。\n",
-    "需": "需：有孚，光亨，贞吉。利涉大川。\n初九：需于郊。利用恒，无咎。\n九二：需于沙。小有言，终吉。\n九三：需于泥，致寇至。\n六四：需于血，出自穴。\n九五：需于酒食，贞吉。\n上六：入于穴，有不速之客三人来，敬之终吉。\n",
-    "节": "节：亨。苦节，不可贞。\n初九：不出户庭，无咎。\n九二：不出门庭，凶。\n六三：不节若，则嗟若，无咎。\n六四：安节，亨。\n九五：甘节，吉；往有尚。\n上六：苦节，贞凶，悔亡。\n",
-    "无妄": "无妄：元亨，利贞。其匪正有眚，不利有攸往。\n初九：无妄，往吉。\n六二：不耕获，不灾畲，则利有攸往。\n六三：无妄之灾，或系之牛，行人之得，邑人之灾。\n九四：可贞，无咎。\n九五：无妄之疾，勿药有喜。\n上九：无妄，行有眚，无攸利。\n",
-    "艮": "艮：艮其背，不获其身，行其庭，不见其人，无咎。\n初六：艮其趾，无咎，利永贞。\n六二：艮其腓，不拯其随，其心不快。\n九三：艮其限，列其夤，厉薰心。\n六四：艮其身，无咎。\n六五：艮其辅，言有序，悔亡。\n上九：敦艮，吉。\n",
-    "复": "复：亨。出入无疾，朋来无咎。反复其道，七日来复，利有攸往。\n初九：不远复，无祗悔，元吉。\n六二：休复，吉。\n六三：频复，厉无咎。\n六四：中行独复。\n六五：敦复，无悔。\n上六：迷复，凶，有灾眚。用行师，终有大败，以其国君，凶；至于十年，不克征。\n",
-    "剥": "剥：不利有攸往。\n初六：剥床以足，蔑贞凶。\n六二：剥床以辨，蔑贞凶。\n六三：剥之，无咎。\n六四：剥床以肤，凶。\n六五：贯鱼，以宫人宠，无不利。\n上九：硕果不食，君子得舆，小人剥庐。\n",
-    "巽": "巽：小亨，利攸往，利见大人。\n初六：进退，利武人之贞。\n九二：巽在床下，用史巫纷若，吉，无咎。\n九三：频巽，吝。\n六四：悔亡，田获三品。\n九五：贞吉悔亡，无不利。无初有终，先庚三日，后庚三日，吉。\n上九：巽在床下，丧其资斧，贞凶。\n",
-    "比": "比：吉。原筮元永贞，无咎。不宁方来，后夫凶。\n初六：有孚，比之，无咎。有孚盈缶，终来有它吉。\n六二：比之自内，贞吉。\n六三：比之匪人。\n六四：外比之，贞吉。\n九五：显比，王用三驱，失前禽。邑人不诫，吉。\n上六：比之无首，凶。\n",
-    "姤": "姤：女壮，勿用取女。\n初六：系于金柅，贞吉，有攸往，见凶，羸豕孚蹢躅。\n九二：包有鱼，无咎，不利宾。\n九三：臀无肤，其行次且，厉，无大咎。\n九四：包无鱼，起凶。\n九五：以杞包瓜，含章，有陨自天。\n上九：姤其角，吝，无咎。\n",
-    "坤": "坤：元亨，利牝马之贞。君子有攸往，先迷后得主，利西南得朋，东北丧朋。安贞，吉。\n初六：履霜，坚冰至。\n六二：直，方，大，不习无不利。\n六三：含章可贞。或从王事，无成有终。\n六四：括囊；无咎，无誉。\n六五：黄裳，元吉。\n上六：龙战于野，其血玄黄。\n用六：利永贞。\n",
-    "泰": "泰：小往大来，吉亨。\n初九：拔茅茹，以其汇，征吉。\n九二：包荒，用冯河，不遐遗，朋亡，得尚于中行。\n九三：无平不陂，无往不复，艰贞无咎。勿恤其孚，于食有福。\n六四：翩翩，不富，以其邻，不戒以孚。\n六五：帝乙归妹，以祉元吉。\n上六：城复于隍，勿用师。自邑告命，贞吝。\n",
-    "大畜": "大畜：利贞，不家食吉，利涉大川。\n初九：有厉利已。\n九二：舆说輹。\n九三：良马逐，利艰贞。曰闲舆卫，利有攸往。\n六四：童牛之牿，元吉。\n六五：豶豕之牙，吉。\n上九：何天之衢，亨。\n",
-    "未济": "未济：亨，小狐汔济，濡其尾，无攸利。\n初六：濡其尾，吝。\n九二：曳其轮，贞吉。\n六三：未济，征凶，利涉大川。\n九四：贞吉，悔亡，震用伐鬼方，三年有赏于大国。\n六五：贞吉，无悔，君子之光，有孚，吉。\n上九：有孚于饮酒，无咎，濡其首，有孚失是。\n",
-    "震": "震：亨。震来虩虩，笑言哑哑。震惊百里，不丧匕鬯。\n初九：震来虩虩，后笑言哑哑，吉。\n六二：震来厉，亿丧贝，跻于九陵，勿逐，七日得。\n六三：震苏苏，震行无眚。\n九四：震遂泥。\n六五：震往来厉，亿无丧，有事。\n上六：震索索，视矍矍，征凶。震不于其躬，于其邻，无咎。婚媾有言。\n",
-    "明夷": "明夷：利艰贞。\n初九：明夷于飞，垂其翼。君子于行，三日不食，有攸往，主人有言。\n六二：明夷，夷于左股，用拯马壮，吉。\n九三：明夷于南狩，得其大首，不可疾贞。\n六四：入于左腹，获明夷之心，出于门庭。\n六五：箕子之明夷，利贞。\n上六：不明晦，初登于天，后入于地。\n",
-    "丰": "丰：亨，王假之，勿忧，宜日中。\n初九：遇其配主，虽旬无咎，往有尚。\n六二：丰其蔀，日中见斗，往得疑疾，有孚发若，吉。\n九三：丰其沛，日中见沬，折其右肱，无咎。\n九四：丰其蔀，日中见斗，遇其夷主，吉。\n六五：来章，有庆誉，吉。\n上六：丰其屋，蔀其家，闚其户，阒其无人，三岁不觌，凶。\n",
-    "夬": "夬：扬于王庭，孚号，有厉，告自邑，不利即戎，利有攸往。\n初九：壮于前趾，往不胜为咎。\n九二：惕号，莫夜有戎，勿恤。\n九三：壮于頄，有凶。君子夬夬，独行，遇雨，若濡，有愠，无咎。\n九四：臀无肤，其行次且。牵羊悔亡，闻言不信。\n九五：苋陆夬夬，中行无咎。\n上六：无号，终有凶。\n",
-    "离": "离：利贞，亨。畜牝牛，吉。\n初九：履错然，敬之无咎。\n六二：黄离，元吉。\n九三：日昃之离，不鼓缶而歌，则大耋之嗟，凶。\n九四：突如其来如，焚如，死如，弃如。\n六五：出涕沱若，戚嗟若，吉。\n上九：王用出征，有嘉折首，获匪其丑，无咎。\n",
-    "蹇": "蹇：利西南，不利东北；利见大人，贞吉。\n初六：往蹇，来誉。\n六二：王臣蹇蹇，匪躬之故。\n九三：往蹇来反。\n六四：往蹇来连。\n九五：大蹇朋来。\n上六：往蹇来硕，吉；利见大人。\n",
-    "蒙": "蒙：亨。匪我求童蒙，童蒙求我。初筮告，再三渎，渎则不告。利贞。\n初六：发蒙，利用刑人，用说桎梏，以往吝。\n九二：包蒙吉；纳妇吉；子克家。\n六三：勿用取女；见金夫，不有躬，无攸利。\n六四：困蒙，吝。\n六五：童蒙，吉。\n上九：击蒙；不利为寇，利御寇。\n",
-    "晋": "晋：康侯用锡马蕃庶，昼日三接。\n初六：晋如，摧如，贞吉。罔孚，裕无咎。\n六二：晋如，愁如，贞吉。受兹介福，于其王母。\n六三：众允，悔亡。\n九四：晋如硕鼠，贞厉。\n六五：悔亡，失得勿恤，往吉，无不利。\n上九：晋其角，维用伐邑，厉吉无咎，贞吝。\n",
-    "既济": "既济：亨，小利贞，初吉终乱。\n初九：曳其轮，濡其尾，无咎。\n六二：妇丧其茀，勿逐，七日得。\n九三：高宗伐鬼方，三年克之，小人勿用。\n六四：繻有衣袽，终日戒。\n九五：东邻杀牛，不如西邻之禴祭，实受其福。\n上六：濡其首，厉。\n",
-    "睽": "睽：小事吉。\n初九：悔亡，丧马勿逐，自复；见恶人无咎。\n九二：遇主于巷，无咎。\n六三：见舆曳，其牛掣，其人天且劓，无初有终。\n九四：睽孤，遇元夫，交孚，厉无咎。\n六五：悔亡，厥宗噬肤，往何咎。\n上九：睽孤，见豕负涂，载鬼一车，先张之弧，后说之弧，匪寇婚媾，往遇雨则吉。\n",
-    "大过": "大过：栋桡，利有攸往，亨。\n初六：藉用白茅，无咎。\n九二：枯杨生稊，老夫得其女妻，无不利。\n九三：栋桡，凶。\n九四：栋隆，吉；有它吝。\n九五：枯杨生华，老妇得士夫，无咎无誉。\n上六：过涉灭顶，凶，无咎。\n",
-    "屯": "屯：元亨，利贞，勿用有攸往，利建侯。\n初九：磐桓；利居贞，利建侯。\n六二：屯如邅如，乘马班如。匪寇婚媾，女子贞不字，十年乃字。\n六三：即鹿无虞，惟入于林中，君子几不如舍，往吝。\n六四：乘马班如，求婚媾，往吉，无不利。\n九五：屯其膏，小贞吉，大贞凶。\n上六：乘马班如，泣血涟如。\n",
-    "损": "损：有孚，元吉，无咎，可贞，利有攸往。曷之用，二簋可用享。\n初九：巳事遄往，无咎，酌损之。\n九二：利贞，征凶，弗损，益之。\n六三：三人行，则损一人；一人行，则得其友。\n六四：损其疾，使遄有喜，无咎。\n六五：或益之，十朋之龟弗克违，元吉。\n上九：弗损益之，无咎，贞吉，有攸往，得臣无家。\n",
-    "临": "临：元，亨，利，贞。至于八月有凶。\n初九：咸临，贞吉。\n九二：咸临，吉无不利。\n六三：甘临，无攸利。既忧之，无咎。\n六四：至临，无咎。\n六五：知临，大君之宜，吉。\n上六：敦临，吉无咎。\n",
-    "益": "益：利有攸往，利涉大川。\n初九：利用为大作，元吉，无咎。\n六二：或益之，十朋之龟弗克违，永贞吉。王用享于帝，吉。\n六三：益之用凶事，无咎。有孚中行，告公用圭。\n六四：中行，告公从。利用为依迁国。\n九五：有孚惠心，勿问元吉。有孚惠我德。\n上九：莫益之，或击之，立心勿恒，凶。\n",
-    "讼": "讼：有孚，窒。惕中吉。终凶。利见大人，不利涉大川。\n初六：不永所事，小有言，终吉。\n九二：不克讼，归而逋，其邑人三百户，无眚。\n六三：食旧德，贞厉，终吉，或从王事，无成。\n九四：不克讼，复即命渝，安贞吉。\n九五：讼元吉。\n上九：或锡之鞶带，终朝三褫之。\n",
-    "谦": "谦：亨，君子有终。\n初六：谦谦君子，用涉大川，吉。\n六二：鸣谦，贞吉。\n九三：劳谦，君子有终，吉。\n六四：无不利，撝谦。\n六五：不富，以其邻，利用侵伐，无不利。\n上六：鸣谦，利用行师，征邑国。\n",
-    "师": "师：贞，丈人，吉无咎。\n初六：师出以律，否臧凶。\n九二：在师中吉，无咎，王三锡命。\n六三：师或舆尸，凶。\n六四：师左次，无咎。\n六五：田有禽，利执言，无咎。长子帅师，弟子舆尸，贞凶。\n上六：大君有命，开国承家，小人勿用。\n",
-    "困": "困：亨，贞，大人吉，无咎，有言不信。\n初六：臀困于株木，入于幽谷，三岁不觌。\n九二：困于酒食，朱绂方来，利用享祀，征凶，无咎。\n六三：困于石，据于蒺蔾，入于其宫，不见其妻，凶。\n九四：来徐徐，困于金车，吝，有终。\n九五：劓刖，困于赤绂，乃徐有说，利用祭祀。\n上六：困于葛藟，于臲卼，曰动悔。有悔，征吉。\n",
-    "大壮": "大壮：利贞。\n初九：壮于趾，征凶，有孚。\n九二：贞吉。\n九三：小人用壮，君子用罔，贞厉。羝羊触藩，羸其角。\n九四：贞吉悔亡，藩决不羸，壮于大舆之輹。\n六五：丧羊于易，无悔。\n上六：羝羊触藩，不能退，不能遂，无攸利，艰则吉。\n",
-    "革": "革：巳日乃孚，元亨利贞，悔亡。\n初九：巩用黄牛之革。\n六二：巳日乃革之，征吉，无咎。\n九三：征凶，贞厉，革言三就，有孚。\n九四：悔亡，有孚改命，吉。\n九五：大人虎变，未占有孚。\n上六：君子豹变，小人革面，征凶，居贞吉。\n",
-    "观": "观：盥而不荐，有孚顒若。\n初六：童观，小人无咎，君子吝。\n六二：闚观，利女贞。\n六三：观我生，进退。\n六四：观国之光，利用宾于王。\n九五：观我生，君子无咎。\n上九：观其生，君子无咎。\n",
-    "贲": "贲：亨。小利有攸往。\n初九：贲其趾，舍车而徒。\n六二：贲其须。\n九三：贲如濡如，永贞吉。\n六四：贲如皤如，白马翰如，匪寇婚媾。\n六五：贲于丘园，束帛戋戋，吝，终吉。\n上九：白贲，无咎。\n",
-    "豫": "豫：利建侯，行师。\n初六：鸣豫，凶。\n六二：介于石，不终日，贞吉。\n六三：盱豫，悔。迟有悔。\n九四：由豫，大有得。勿疑。朋盍簪。\n六五：贞疾，恒不死。\n上六：冥豫，成有渝，无咎。\n",
-    "井": "井：改邑不改井，无丧无得，往来井井。汔至，亦未繘井，羸其瓶，凶。\n初六：井泥不食，旧井无禽。\n九二：井谷射鲋，瓮敝漏。\n九三：井渫不食，为我心恻，可用汲，王明，并受其福。\n六四：井甃，无咎。\n九五：井冽，寒泉食。\n上六：井收勿幕，有孚元吉。\n",
-    "噬嗑": "噬嗑：亨。利用狱。\n初九：屦校灭趾，无咎。\n六二：噬肤灭鼻，无咎。\n六三：噬腊肉，遇毒；小吝，无咎。\n九四：噬乾胏，得金矢，利艰贞，吉。\n六五：噬乾肉，得黄金，贞厉，无咎。\n上九：何校灭耳，凶。\n",
-    "小畜": "小畜：亨。密云不雨，自我西郊。\n初九：复自道，何其咎，吉。\n九二：牵复，吉。\n九三：舆说辐，夫妻反目。\n六四：有孚，血去惕出，无咎。\n九五：有孚挛如，富以其邻。\n上九：既雨既处，尚德载，妇贞厉。月几望，君子征凶。\n",
-    "旅": "旅：小亨，旅贞吉。\n初六：旅琐琐，斯其所取灾。\n六二：旅即次，怀其资，得童仆贞。\n九三：旅焚其次，丧其童仆，贞厉。\n九四：旅于处，得其资斧，我心不快。\n六五：射雉一矢亡，终以誉命。\n上九：鸟焚其巢，旅人先笑后号啕。丧牛于易，凶。\n",
-    "坎": "坎：习坎，有孚，维心亨，行有尚。\n初六：习坎，入于坎窞，凶。\n九二：坎有险，求小得。\n六三：来之坎坎，险且枕，入于坎窞，勿用。\n六四：樽酒簋贰，用缶，纳约自牖，终无咎。\n九五：坎不盈，祗既平，无咎。\n上六：系用徽纆，置于丛棘，三岁不得，凶。\n",
-    "乾": "乾：元亨，利贞。\n初九：潜龙，勿用。\n九二：见龙在田，利见大人。\n九三：君子终日乾乾，夕惕若，厉，无咎。\n九四：或跃在渊，无咎。\n九五：飞龙在天，利见大人。\n上九：亢龙有悔。\n用九：见群龙无首，吉。\n",
-    "同人": "同人于野，亨。利涉大川，利君子贞。\n初九：同人于门，无咎。\n六二：同人于宗，吝。\n九三：伏戎于莽，升其高陵，三岁不兴。\n九四：乘其墉，弗克攻，吉。\n九五：同人，先号啕而后笑。大师克相遇。\n上九：同人于郊，无悔。\n",
-    "升": "升：元亨，用见大人，勿恤，南征吉。\n初六：允升，大吉。\n九二：孚乃利用禴，无咎。\n九三：升虚邑。\n六四：王用亨于岐山，吉无咎。\n六五：贞吉，升阶。\n上六：冥升，利于不息之贞。\n",
-    "随": "随：元亨利贞，无咎。\n初九：官有渝，贞吉。出门交有功。\n六二：系小子，失丈夫。\n六三：系丈夫，失小子。随有求得，利居贞。\n九四：随有获，贞凶。有孚在道，以明，何咎。\n九五：孚于嘉，吉。\n上六：拘系之，乃从维之。王用亨于西山。\n",
-    "渐": "渐：女归吉，利贞。\n初六：鸿渐于干，小子厉，有言，无咎。\n六二：鸿渐于磐，饮食衎衎，吉。\n九三：鸿渐于陆，夫征不复，妇孕不育，凶；利御寇。\n六四：鸿渐于木，或得其桷，无咎。\n九五：鸿渐于陵，妇三岁不孕，终莫之胜，吉。\n上九：鸿渐于陆，其羽可用为仪，吉。\n",
-    "否": "否之匪人，不利君子贞，大往小来。\n初六：拔茅茹，以其汇，贞吉亨。\n六二：包承。小人吉，大人否，亨。\n六三：包羞。\n九四：有命，无咎，畴离祉。\n九五：休否，大人吉。其亡其亡，系于苞桑。\n上九：倾否，先否后喜。\n",
-    "归妹": "归妹：征凶，无攸利。\n初九：归妹以娣，跛能履，征吉。\n九二：眇能视，利幽人之贞。\n六三：归妹以须，反归以娣。\n九四：归妹愆期，迟归有时。\n六五：帝乙归妹，其君之袂，不如其娣之袂良，月几望，吉。\n上六：女承筐无实，士刲羊无血，无攸利。\n",
-    "履": "履虎尾，不咥人，亨。\n初九：素履，往无咎。\n九二：履道坦坦，幽人贞吉。\n六三：眇能视，跛能履，履虎尾，咥人，凶。武人为于大君。\n九四：履虎尾，诉诉，终吉。\n九五：夬履，贞厉。\n上九：视履考祥，其旋元吉。\n",
-    "大有": "大有：元亨。\n初九：无交害，匪咎，艰则无咎。\n九二：大车以载，有攸往，无咎。\n九三：公用亨于天子，小人弗克。\n九四：匪其彭，无咎。\n六五：厥孚交如，威如；吉。\n上九：自天佑之，吉无不利。\n",
-    "小过": "小过：亨，利贞，可小事，不可大事。飞鸟遗之音，不宜上，宜下，大吉。\n初六：飞鸟以凶。\n六二：过其祖，遇其妣；不及其君，遇其臣；无咎。\n九三：弗过防之，从或戕之，凶。\n九四：无咎，弗过遇之。往厉必戒，勿用永贞。\n六五：密云不雨，自我西郊，公弋取彼在穴。\n上六：弗遇过之，飞鸟离之，凶，是谓灾眚。\n",
-    "咸": "咸，亨，利贞，取女吉。\n初六，咸其拇。\n六二，咸其腓，凶，居吉。\n九三，咸其股，执其随，往吝。\n九四，贞吉，悔亡，憧憧往来，朋从尔思。\n九五，咸其脢，无悔。\n上六，咸其辅颊舌。\n",
-    "解": "解：利西南，无所往，其来复吉。有攸往，夙吉。\n初六：无咎。\n九二：田获三狐，得黄矢，贞吉。\n六三：负且乘，致寇至，贞吝。\n九四：解而拇，朋至斯孚。\n六五：君子维有解，吉；有孚于小人。\n上六：公用射隼于高墉之上，获之，无不利。\n",
-    "兑": "兑：亨，利贞。\n初九：和兑，吉。\n九二：孚兑，吉，悔亡。\n六三：来兑，凶。\n九四：商兑，未宁，介疾有喜。\n九五：孚于剥，有厉。\n上六：引兑。\n",
-    "颐": "颐：贞吉。观颐，自求口实。\n初九：舍尔灵龟，观我朵颐，凶。\n六二：颠颐，拂经，于丘颐，征凶。\n六三：拂颐，贞凶，十年勿用，无攸利。\n六四：颠颐，吉，虎视眈眈，其欲逐逐，无咎。\n六五：拂经，居贞吉，不可涉大川。\n上九：由颐，厉吉，利涉大川。\n",
-    "鼎": "鼎：元吉，亨。\n初六：鼎颠趾，利出否，得妾以其子，无咎。\n九二：鼎有实，我仇有疾，不我能即，吉。\n九三：鼎耳革，其行塞，雉膏不食，方雨亏悔，终吉。\n九四：鼎折足，覆公餗，其形渥，凶。\n六五：鼎黄耳，金铉，利贞。\n上九：鼎玉铉，大吉，无不利。\n",
-    "中孚": "中孚：豚鱼吉，利涉大川，利贞。\n初九：虞吉，有它不燕。\n九二：鸣鹤在阴，其子和之，我有好爵，吾与尔靡之。\n六三：得敌，或鼓或罢，或泣或歌。\n六四：月几望，马匹亡，无咎。\n九五：有孚挛如，无咎。\n上九：翰音登于天，贞凶。\n",
-    "遯": "遯：亨，小利贞。\n初六：遯尾，厉，勿用有攸往。\n六二：执之用黄牛之革，莫之胜说。\n九三：系遯，有疾厉，畜臣妾吉。\n九四：好遯，君子吉，小人否。\n九五：嘉遯，贞吉。\n上九：肥遯，无不利。\n",
-    "涣": "涣：亨。王假有庙，利涉大川，利贞。\n初六：用拯马壮，吉。\n九二：涣奔其机，悔亡。\n六三：涣其躬，无悔。\n六四：涣其群，元吉。涣有丘，匪夷所思。\n九五：涣汗其大号，涣王居，无咎。\n上九：涣其血，去逖出，无咎。\n",
-    "家人": "家人：利女贞。\n初九：闲有家，悔亡。\n六二：无攸遂，在中馈，贞吉。\n九三：家人嗃嗃，悔厉吉；妇子嘻嘻，终吝。\n六四：富家，大吉。\n九五：王假有家，勿恤，往吉。\n上九：有孚威如，终吉。\n"
+    "The Creative": {
+        "0": "Ch'ien signifies creation, growth, and the start of new ventures. It advises persistence, hard work, and awareness of obstacles. Symbolic of the yang principle and associated with the sun, Ch'ien also stands for the creative idea before realisation and the hidden potential within any situation. It urges you to stay true to oneself and the higher reality and recognise growth and success potential in every situation.",
+        "1": "A hidden dragon lurks in the darkness. Act not in haste, wait for the right moment and the revelation of the hidden elements.",
+        "2": "As the dragon emerges from the shadows, seeking wisdom and guidance becomes beneficial. Leading by example rather than force brings about a positive influence.",
+        "3": "The superior man is active yet filled with worries. Recognise this danger, but avoid blaming. Stay adaptable, maintain balance, and be guided by your inner truth to avoid the pitfalls of ambition.",
+        "4": "During moments of uncertainty, trust in your forward momentum and the guidance of the Creative. Be alert and open to hidden opportunities for growth.",
+        "5": "The dragon in the heavens indicates progress and success. Align with the principles of the creative force for natural and effortless influence.",
+        "6": "Arrogance and ignorance of warnings lead to regret. Stay humble, genuine, and align with the natural order to avoid negative consequences."
+    },
+    "The Receptive": {
+        "0": "This hexagram symbolises material essence, nurturing, and the feminine aspect of nature, representing the power of receiving and nurturing. It advises humility, patience, and introspection, encouraging adaptability, and openness. It serves as a reminder of the capacity to support and accept without seeking recognition and to listen and assist rather than initiate.",
+        "1": "The crunch of hoarfrost signifies doubts on the life path. Embrace humility and trust in the unknown. Avoid reliance on fear and anger; instead, promote selflessness and rely on moral principles.",
+        "2": "Stay open and receptive to shape your ideas and act according to circumstance. Maintain harmony with the natural order, avoid excess, and trust in the Creative to complete what you initiate.",
+        "3": "Humility and sincerity are essential. Serve others without seeking recognition and maintain receptivity. Do not seek undue influence, accept occasional failures, and stay steadfast to the inner truth.",
+        "4": "Caution is needed. Avoid confrontations with the dark forces and maintain neutrality. Navigate the path by remaining reserved.",
+        "5": "Humility and gentle persuasion are virtues. Engage with those who are receptive and focus on doing the work of the Sage without seeking influence.",
+        "6": "Don't let internal conflicts overwhelm you. Acknowledge your fears and doubts but do not let them control you. Practice humility and restraint to avoid self-destruction."
+    },
+    "Difficulty at the Beginning": {
+        "0": "Two powerful trigrams, K'an (rain) and Chên (thunder), symbolise new beginnings' chaos. During these uncertain times, avoid hasty actions and seek guidance from a higher power. Difficulties are wake-up calls that can lead to growth and success. Perseverance, hard work, and awareness of potential obstacles are crucial.",
+        "1": "Stay steadfast and persistent when facing initial obstacles. Seek guidance from those with wisdom and adopt a measured approach to gain insights and solutions.",
+        "2": "Exercise patience when considering a solution to a problem. Avoid hasty decisions and wait for the right path to present itself.",
+        "3": "Seek the guidance of a higher power instead of acting alone. Cultivate an open mind, avoid rushing into action, and trust the answer will come in due time.",
+        "4": "When difficulties arise, strive for unity with the guidance of the Sage. Remain humble and faithful to the principles of the Sage to move forward. Follow the truth and do what is correct.",
+        "5": "Maintain a steady and balanced approach when facing difficulties. Move forward slowly and methodically, building confidence by staying centred and patient. Navigate difficulties with steadiness and detachment.",
+        "6": "In times of discouragement, hold fast to truth and persevere. Recognise that doubts and moments of discouragement are natural, but succumbing to them leads to defeat. Trust in your journey and stay true to your path."
+    },
+    "Youthful Folly": {
+        "0": "Explains the relationship between the wise Sage and the seeker of guidance. The Sage will only share insights if the seeker is receptive, open-minded, and willing to suspend disbelief. The hexagram acknowledges that mistakes and ignorance are a natural part of the journey and reminds us to approach others with an open mind.",
+        "1": "Encourages self-discipline and inner reflection. Highlights the need to actively apply our knowledge and learning, not merely rely on being told what to do. Balance between self-discipline and courageous contemplation is vital.",
+        "2": "Stresses patience and kindness with those less experienced or wise. Promotes leading by example and maintaining a disengaged state of mind. One should cultivate inner strength and calm to effectively guide others.",
+        "3": "Warns against a servile approach to learning. Encourages letting individuals make mistakes and learn through their experiences. A humble and genuine approach to learning is key.",
+        "4": "Warns against ego-driven navigation of life. Stresses the importance of letting go of the ego and returning to humility to progress.",
+        "5": "Promotes a childlike openness of mind in understanding the world. Focus should be on the truth rather than attempting to make ourselves understood.",
+        "6": "Speaks to punishment and prevention of transgressions. Suggests fate punishes us when we disregard cosmic laws, as a necessary means to rectify our attitudes. It is important not to dwell on the faults and transgressions and to maintain a balanced view of them."
+    },
+    "Waiting (Nourishment)": {
+        "0": "Depicts the energy that comes from a correct 'waiting attitude,' which avoids doubt and impatience. Encourages staying cheerful and maintaining principles. It warns against rushing changes and losing inner independence due to doubts or fears. It serves as a reminder that progress is gradual.",
+        "1": "Preparation for challenges is crucial. Trust your inner strength and stay open to unexpected developments.",
+        "2": "In uncertainty, maintain trust and stay grounded in your beliefs. Let events unfold naturally and stay true to yourself.",
+        "3": "Neglecting the right mindset invites challenges. Avoid negative thoughts and stay true to your principles.",
+        "4": "Avoid using force. Retreat from negative emotions and let fate take its course.",
+        "5": "Use calm moments to strengthen yourself. Adhere to discipline and correctness for long-term good fortune.",
+        "6": "Embrace unexpected developments, even in dire circumstances. Open-mindedness and perseverance can lead to good fortune."
+    },
+    "Conflict": {
+        "0": "Stresses on avoiding questioning 'why' and trusting the guidance of the Creative to resolve the conflict. It recognises internal conflict as the root cause of all conflicts. It advises emotional detachment from the problem and trusting the Creative for resolution.",
+        "1": "Promotes addressing conflicts early before they escalate. Advises disengagement from situations influenced by ego, which can lead to good fortune.",
+        "2": "Encourages avoiding conflicts driven by ego. Suggests retreat and neutrality, allowing situations to unfold naturally. Emphasises a clear mind and waiting for the right time to act.",
+        "3": "Stresses on staying true to one's virtues even when it means working in the background. Advises against intervening or asserting oneself where others may be wrong.",
+        "4": "Warns against taking shortcuts due to inner conflict. Recommends turning back, submitting to fate, and finding peace in perseverance for success.",
+        "5": "In conflict, advises entrusting the situation to a higher power for the best resolution. Such trust assures the outcome will be for the greater good.",
+        "6": "Discourages constant rumination over problems, which can lead to confusion. Suggests releasing the problem and letting fate take its course."
+    },
+    "The Army": {
+        "0": "Indicates a time of conflict requiring conquering egocentric impulses. It calls for inner autonomy, vigilance, self-control, and a firm commitment to values. Symbolises mastery of our inner selves and the need for a strong, guiding figure within us. Victory is found in detachment, inner stillness, modest means, and protected gains.",
+        "1": "Promotes clear plans and order in collective efforts. Encourages humility, justice, and resistance to impulsive actions. Urges combat against fear, selfishness, or vanity within us.",
+        "2": "As a leader, calls for comfort, reassurance, patience, and loyalty. Encourages flexibility and avoidance of rigidness and self-interest.",
+        "3": "Warns against the usurpation of power by the ego. Advises surrendering to wisdom and dispelling negative emotions to overcome past mistakes.",
+        "4": "Recommends strategic retreat when facing opposition. Encourages maintaining composure and accepting the current situation.",
+        "5": "Instructs to address evil with firm yet measured responses. Discourages holding onto grievances and promotes moving forward with clarity and purpose.",
+        "6": "Speaks of a powerful leader who creates nations and bestows lands. Warns against unethical means of victory and promotes modesty and caution for long-lasting success."
+    },
+    "Holding Together": {
+        "0": "Depicts unity through inner independence and moral integrity. Underlines the importance of holding together within oneself and enabling unity in others. Stresses on the need for perseverance, consistency, and a mutual aiding union. Calls for self-reflection on these capabilities.",
+        "1": "Highlights the role of steadfast adherence to truth in bonding with others. Encourages allowing others to learn through difficult experiences and offers constant support.",
+        "2": "Recommends embracing higher nature and avoiding negative influences. Promotes cautious relationships and hopes for others' growth.",
+        "3": "Warns against association with wrong people or indulgence in harmful attitudes. Stresses maintaining integrity and assessing the worthiness of relationships.",
+        "4": "Suggests applying Sage's teachings universally for prosperity. Encourages personal growth and opening up to new opportunities.",
+        "5": "Advocates setting boundaries and allowing voluntary cooperation for successful relationships. Stresses the importance of sincerity and slow progress.",
+        "6": "Cautions against hasty starts without a proper foundation. Urges waiting for the right conditions and showing sincerity. Reminds to act with patience, tolerance, and commitment to the right."
+    },
+    "The Taming Power of the Small": {
+        "0": "Advises patience and focus on personal growth instead of controlling external circumstances. Highlights the importance of modesty, humility, self-reflection, and stewardship. Recommends cultivating inner peace and allowing natural development.",
+        "1": "Calls for letting go of the need to control outcomes, embracing humility and patience, and avoiding impulsive behaviours.",
+        "2": "Warns against straying from the path of truth due to doubts. Suggests staying steadfast and resisting emotional temptations.",
+        "3": "Emphasises maintaining inner integrity and avoiding impulsivity. Advises against imposing control, advocating for tranquillity, detachment, and faith in natural unfolding.",
+        "4": "Advocates sincerity in life, compassion, wisdom, balance, and moderation. Stresses the importance of avoiding harshness and embodying detachment and humility.",
+        "5": "Encourages sincerity, dedication, and sharing wealth. Advises against boasting and promotes the practice of the Sage's wisdom.",
+        "6": "Reminds to be mindful of actions and to uphold modesty and humility. Calls for caution, patience, and steadfast commitment to principles for securing lasting success."
+    },
+    "Treading (Conduct)": {
+        "0": "Advises sincerity, simplicity, and innocence when facing fate and emphasises personal growth for improving external conditions. Advocates for humility, gentleness, and staying rooted in sage principles. Warns against aggressive actions and reminds to be mindful of one's impact on others.",
+        "1": "Emphasises return to simplicity, gradual progression, and detachment from selfish desires. Warns against ambition, restlessness, and hasty actions. Advocates for a humble mindset.",
+        "2": "Encourages acceptance of fate, avoiding internal conflicts, and embracing simplicity for steady progress towards success.",
+        "3": "Advises against pride and impulsivity, promotes caution, moderation, and humility. Suggests letting go of blind ambition and allowing natural progression. Emphasises the need for modest demeanour in face of success.",
+        "4": "Warns against attempting control over outcomes. Advocates for focus on personal growth, enlightenment, and trust in the natural path for overcoming dangers and achieving success.",
+        "5": "Recommends a balance between assertiveness and respect for others. Stresses maintaining a humble and detached stance while standing firm in one's beliefs. Advocates flexibility along with firmness.",
+        "6": "Promotes humility and avoidance of impulsiveness to overcome difficulties and achieve good fortune. Encourages following the signs of conduct and adherence to righteousness for success."
+    },
+    "Peace": {
+        "0": "In the I Ching, Hexagram 11 epitomises a perfect equilibrium of celestial and terrestrial forces, akin to a person achieving inner and outer balance. While peace is welcome, one must not forget their principles and responsibilities. This hexagram serves as a call to remain conscientious, learning and growing even in times of peace, embodying the essence of a young tree reaching for the light.",
+        "1": "Signifies an opportunity for growth, underscoring the interconnectedness of life. It encourages an open and humble attitude for good fortune, prompting us to address our problems at their root. It calls us to remain connected with our inner wisdom and the world for growth and prosperity.",
+        "2": "Encourages balance during peaceful times, guiding us to handle challenging individuals and situations with patience. It advises maintaining independence and acting as an intermediary between the Sage and others, promoting conscientious actions.",
+        "3": "Warns of becoming too attached to peaceful times, reminding us of life's inherent cycles. It advises maintaining a sense of detachment and preparedness for unexpected changes, leading to stability in the face of adversity.",
+        "4": "Emphasises sincerity and simplicity in our interactions, cautioning against contrivance or manipulation. It advises creating an environment of trust and mutual respect by relating sincerely and simply with others.",
+        "5": "Underscores patience and modesty in relationships, using the analogy of a marriage between a princess and a person of lower status. It advises us to stay humble and non-competitive, creating a harmonious union that brings happiness and blessings.",
+        "6": "Advises surrendering to the wisdom of a Higher Power, urging us to dismantle our defences and strategies. It suggests embracing changes and submitting to the situation without resentment, leading to peace and understanding in difficult circumstances."
+    },
+    "Stanstill (Stagnation)": {
+        "0": "Represents a time of uncertainty and transition, where progress may seem hindered. Despite external obstacles, inner growth and transformation can continue. This period calls for humility, patience, and receptivity, encouraging one to wait for the opportune moment rather than forcing action.",
+        "1": "Advises stepping back and letting go of attempts to control the situation. It encourages cultivating inner peace, focusing on personal growth and transformation, and waiting for the right guidance for eventual success.",
+        "2": "Encourages steadfastness in values and principles during challenging times. Enduring with patience, humility, and grace helps overcome obstacles and inspire others. It advises against succumbing to negativity and maintaining a positive outlook.",
+        "3": "Suggests allowing those who have strayed to realise their mistakes. It advises against imposing your will or expectations, advocating for maintaining integrity and independence, and upholding one's beliefs and values.",
+        "4": "Emphasises aligning with higher power and wisdom, maintaining a balance between humility and assertiveness. Staying alert and focused on personal growth allows positive changes to manifest in the surrounding world.",
+        "5": "Advises holding steadfast to beliefs, values, and inner wisdom to secure progress and maintain stability. Commitment to truth and goodness helps overcome fear and uncertainty, ensuring a successful outcome.",
+        "6": "Promises the end of stagnation through consistent efforts of a person of exemplary character. Maintaining a pure and correct inner attitude, the power of inner truth influences others positively, bringing about good fortune."
+    },
+    "Fellowship with others": {
+        "0": "Elucidates the importance of right relationships, their foundations, and the significance of working together. It is a gentle reminder of the age-old wisdom of cooperation, community, and good communication.",
+        "1": "Underscores the essence of transparency and fairness in nurturing robust relationships. It also warns against changing our objectives midway, leading to possible conflicts.",
+        "2": "Cautions against forming cliques, urging us to align our actions with universal principles rather than just self-interests to maintain meaningful connections.",
+        "3": "Warns against the dangers of concealed intentions and emphasises the power of truth, trust, and unity in forging lasting relationships.",
+        "4": "Acknowledges that misunderstandings can lead to separations. Yet, it encourages perseverance to overcome challenges and attain unity.",
+        "5": "Portrays the inevitability of reunion amidst separations, emphasising the need for patience, kindness, and positivity in reaching true unity.",
+        "6": "Encourages embracing the path of the Sage, stating that it may be challenging but ultimately leads to peace, joy, and unity."
+    },
+    "Possession in Great Measure": {
+        "0": "Learn how to achieve inner peace and abundance through balance, humility, and generosity. This hexagram holds keys to personal growth, spiritual development, and achieving success and prosperity.",
+        "1": "Explore strategies to maintain inner peace and harmony amidst potential challenges. Understand how to embrace joy as a gift, leading to more blessings.",
+        "2": "Understand the significance of inner peace, humility, and self-reliance. Learn how these qualities can bring stability and opportunities for growth and success.",
+        "3": "Discover why true success isn't about material wealth or power but about positive impact on others and selflessness.",
+        "4": "Discover the power of trusting your instincts, following your own path, and embracing individuality over conformity.",
+        "5": "Learn how a dignified and accessible understanding of truth can bring good fortune. Understand the balance of sharing insights modestly.",
+        "6": "Reveal how mindfulness, dedication to principles, and conscientiousness can lead to divine blessings and progress."
+    },
+    "Modesty": {
+        "0": "Understand the power of modesty and its impact on character development. This Hexagram teaches how to embrace simplicity, truth, and the wisdom of the Sage while resisting negative habits.",
+        "1": "Understand the value of humility and modesty in success, and how to achieve greatness through restraint and silence.",
+        "2": "See how a modest attitude can positively impact others and lead to success by following the natural flow of events.",
+        "3": "Learn to stay humble, focused, and avoid complacency to successfully complete tasks and achieve goals.",
+        "4": "Uncover the benefits of acting with sincerity and dedication, demonstrating loyalty and commitment, and achieving success.",
+        "5": "Discover how maintaining modesty, integrity, and objective thinking while advancing with determination can lead to success.",
+        "6": "Grasp the importance of humility and self-control in challenging circumstances, and how eliminating negative influences can lead to personal growth."
+    },
+    "Enthusiasm": {
+        "0": "Understand the different kinds of enthusiasm - inspired by truth, inspired in others by balance, and deluded enthusiasm fuelled by ego. Reflect on how the right enthusiasm can lead to success while the wrong type can cause misfortune.",
+        "1": "Identify the pitfalls of arrogance and egotism and realise the importance of humility, innocence, and divine connection in achieving true success.",
+        "2": "Understand the value of vigilance in maintaining one's emotional state, staying aware of signs of discontentment or restlessness, and preserving balance and independence.",
+        "3": "Grasp the warning against seeking external solutions and the importance of relying on inner strength and principles, even in the face of challenges.",
+        "4": "Discover the power of unwavering belief in the rightness of one's path and actions, leading to a radiating energy that attracts others.",
+        "5": "Learn the transformative potential of challenging situations and the importance of aligning with the Higher Power, even amidst adversity.",
+        "6": "Avoid the trap of false ambitions, embrace the path of truth and strength, and realise that it's never too late to correct one's course towards success and fulfilment."
+    },
+    "Following": {
+        "0": "Unearth the nuances of the 'Following' hexagram. Discover the potent blend of strong, stable leadership and the necessity of aligning oneself with such authority for success. This hexagram implores us to scrutinise those we follow and understand the gravity of our choice.",
+        "1": "Learn about the importance of open dialogue, deep listening, and how quiet confidence can be a tool for communicating truth, in the I Ching's teachings.",
+        "2": "Explore the concept of inner sacrifice, the release of petty desires, and the pursuit of the highest good as per the I Ching. Learn about the transformative journey towards personal growth and fulfilment.",
+        "3": "Understand the significance of truthful relationships and the sacrifices required to maintain them, and the I Ching's message on self-esteem and inner growth.",
+        "4": "Discover the wisdom of not becoming attached to success, maintaining independence, and following the path of good with clarity and purpose.",
+        "5": "Experience the teachings of the I Ching on the power of sincerity, the guidance of the Sage, and the path towards ultimate success and fulfilment.",
+        "6": "Uncover the I Ching's guidance on unwavering commitment to the truth, the support of the Sage, and how we can become vessels for a force greater than ourselves."
+    },
+    "Work on What Has Been Spoiled (Decay)": {
+        "0": "Embark on a journey of self-reflection and correction, and discover the three steps of self-correction: seeking out faults, resolving against them, and guarding against their return.",
+        "1": "Learn how to break free from harmful, inherited habits and the necessity of courage and openness for growth and positive change.",
+        "2": "Discover the impact of deep-seated fears on actions and thoughts, and the power of patience, understanding, and gentleness in overcoming these fears.",
+        "3": "Uncover the balance between correcting what is wrong and avoiding excessive force. The I Ching advises a moderate approach for the most favourable outcome.",
+        "4": "Learn about the consequences of tolerating negative behaviour and the importance of upholding moral standards to maintain personal integrity and self-esteem.",
+        "5": "Experience the process of renewing inner attitudes, correcting past mistakes, and the resulting praise and support drawn from the universe.",
+        "6": "Explore the journey of self-improvement, the need for detachment from societal norms, and the potential impact of personal growth on others."
+    },
+    "Approach": {
+        "0": "Unveil a turning point, a shift from darkness to growth and prosperity. Cultivate a balanced attitude, maintaining humility, focus, and discipline while seizing new opportunities.",
+        "1": "Discover how caution and a level-headed approach ensure sustained success in new chapters of life. Learn to maintain inner principles and a correct mindset.",
+        "2": "Learn the value of a harmonious relationship with the Sage and how every experience can become an opportunity for growth and further advancement.",
+        "3": "Unearth the dangers of complacency and the significance of upholding inner discipline and reserve, even amidst success. Your responsibility as an influential person lies in maintaining the principles that brought success.",
+        "4": "Acknowledge the strengths and abilities of all parties involved in any situation. Embrace the infinite potential of yourself and others, and maintain an open-minded attitude for favourable outcomes.",
+        "5": "Learn the art of modesty, correctness, and patience in uncertainty. Discover the keys to lasting success and attracting help from others without interfering in the natural course of things.",
+        "6": "Discover the path to true success through embodying a compassionate approach, adhering to principles, and aligning with the wisdom of the Sage. Become a source of guidance and inspiration for others."
+    },
+    "Contemplation": {
+        "0": "Embrace the importance of seeking inner truth and wisdom through quiet introspection. Discover how aligning thoughts and actions with the natural flow of the universe can positively influence the world. Understand the limitless power of the mind to create our reality.",
+        "1": "Discover the need for patience and understanding towards others in their spiritual journey. Learn to inspire others through personal contemplation and understanding without forcing them to follow the same path.",
+        "2": "Learn to trust the hidden power of your work. Realise the importance of patience and an impersonal attitude even in the face of setbacks or insensitivity. Understand that slow progress will lead to enduring success.",
+        "3": "Unearth the key to progress: self-awareness and self-reflection. Avoid overconfidence and attachment to outcomes, and acknowledge limitations and flaws for personal and spiritual growth.",
+        "4": "Understand the importance of being a respectful and humble influence when in a position of power. Learn to lead with gentleness, tolerance, and respect, fostering unity and harmony.",
+        "5": "Contemplate your own life to understand the workings of the universe. Correct attitudes to avoid negative consequences, and view events as opportunities for growth. Contribute to the world by examining and correcting yourself.",
+        "6": "Strive to be blameless through sincere contemplation. Recognise and correct mistakes, sacrificing ego for the greater good. Realise that true success comes from inner growth and self-correction rather than external achievements."
+    },
+    "Biting Through": {
+        "0": "Learn the importance of decisive action to break through barriers. Understand that firm resolve and clear understanding of the situation are crucial. Avoid rash actions, remain focused on goals, and overcome setbacks.",
+        "1": "Learn from mistakes to avoid compounding the severity of misfortune. Understand the importance of taking responsibility for actions and using experiences as opportunities for growth and self-improvement.",
+        "2": "Avoid excessive anger or negative emotions, even when dealing with a lack of integrity or departure from truth. Maintain a balanced perspective and humble attitude while correcting situations.",
+        "3": "Handle longstanding conflicts with understanding and forgiveness, avoiding reactive patterns and seeking peaceful resolutions. Refrain from avenging oneself to avoid further conflict and harm.",
+        "4": "Resist the temptation to fall back into old habits and maintain a balanced, cautious approach. Understand the role of inner thoughts in resolving difficulties and cultivate a positive mindset.",
+        "5": "Ensure both parties are dedicated to the good for unity to occur. Do not shield people from the consequences of their actions, and only assist those willing to correct their mistakes. Be patient and allow events to unfold naturally for the best outcomes.",
+        "6": "Avoid stubbornness and insistence on doing things your way to prevent humiliation and punishment. Humbly return to the path of righteousness and trust in the universe's natural order to avoid making mistakes."
+    },
+    "Grace": {
+        "0": "Understand the difference between false and true grace. Cultivate true grace through humility, simplicity, and acceptance. Let go of ego's control and focus on inner strength. Avoid arrogance and strive for balance in life for success and good fortune.",
+        "1": "Start any endeavour with care and humility. Don't force a solution, but rather be guided by the unknown. Recognise limitations and potential for egotism. Remain open and let inner truth guide you.",
+        "2": "Avoid focusing on superficial appearances, prioritise substance over style. Don't be distracted by superficial adornments or distractions, return to what is essential.",
+        "3": "Even with positive changes, remain cautious. Avoid overconfidence and forced progress. Stay disciplined and perseverant to maintain good fortune.",
+        "4": "Stay humble and authentic even in the face of temptation. Do not underestimate simplicity, accept not knowing all the answers, and retain humility. Silence is not a weakness.",
+        "5": "Cultivate inner worth even if it leaves you vulnerable. Focus on right actions requiring courage and self-sacrifice rather than seeking external validation.",
+        "6": "Let go of superficial adornments and ego-driven desires. Appreciate the beauty of the universe and acknowledge limitations. Achieve greatness through grace and acceptance, surpassing false displays of strength. Power comes from acceptance and grace, accessed by letting go of attachment to external forms of power and authority."
+    },
+    "Splitting Apart": {
+        "0": "This hexagram encourages the release of attachments and standing firm in beliefs during times of change and growth. Understand that 'splitting apart' is a necessary part of growth, allowing for new possibilities and experiences. Stay resilient, flexible, and brave while navigating through unfamiliar terrains.",
+        "1": "Doubt and fear driven by ego can lead to destruction. Instead, develop acceptance of the universe's workings and trust its balance. Release your attachments to personal grievances for a more positive outcome.",
+        "2": "Stubbornness can lead to danger. Exercise caution and wait for the right time to act. Patience and self-control are essential for success.",
+        "3": "Recognise and separate from negative influences. There's no need to assign blame, only to move forward. Support those making steps towards positivity.",
+        "4": "Accept the past and learn from it. Rather than dwelling on misfortune, regain your inner stability to move forward and avoid further harm.",
+        "5": "Surrender the desire to control and allow the flow of life to guide you. Trust the power of acceptance and non-action to bring about positive change.",
+        "6": "Return to the correct path by persevering through doubt and fear. Starve out negative energies by accepting the way the universe works. This creates a space for good to flourish and affect positively."
+    },
+    "Return": {
+        "0": "The hexagram encourages a return to our true selves and path of acceptance, humility, and discipline. It prompts us to let go of old belief systems, defence mechanisms, and ego-centric expressions blocking growth. It's a time for rest, self-reflection, rediscovery, and reconnection with our roots. The emphasis is on cautious steps, change, and transformation.",
+        "1": "Early recognition and correction of straying from the right path is essential. Confronting doubts early on can prevent further deviation.",
+        "2": "Pride can lead to danger. Patience, tolerance, and humility bring good fortune.",
+        "3": "Avoid immediate resolution demands and remain patient to reach your goals. Shed your resistant attitude for progress.",
+        "4": "Stay true to your principles, even if you're alone in doing so. Inner peace and a strong sense of self are your rewards.",
+        "5": "Take responsibility for actions, recognise mistakes, and correct them. This is the noble-hearted path of Return.",
+        "6": "Missing the moment of Return can lead to misfortune. It's vital to self-examine, correct wrong attitudes, and seize opportunities when they arise."
+    },
+    "Innocence": {
+        "0": "Emphasises the importance of purity of heart and a receptive mindset to Higher Power's guidance. To succeed, abandon preconceptions and manipulations, embracing the natural flow of things. Return to a childlike openness to experiences and opportunities, staying flexible and adaptable. Maintain a pure attitude, let go of past regrets, and stay true to your values.",
+        "1": "Staying true to your original nature and remaining detached leads to good fortune. Trust the natural flow of life, avoid manipulation, and focus on the present moment. Innocence and detachment bring success.",
+        "2": "Avoid focusing too much on the end result to prevent anxiety. Concentrate on the present moment and the task at hand, trust that everything will work out, maintaining your simplicity and sincerity.",
+        "3": "Accept adverse events with equanimity, keeping your heart and mind pure. Do not let these events disrupt your inner innocence. Trust that things will work out for the best.",
+        "4": "Stay committed to innocence and correctness, even facing opposition. Trust your inner guidance and intuition. Do not allow yourself to be swayed by others' opinions or fears.",
+        "5": "When facing unexpected trouble, do not rush to act. Trust that it will pass and remain innocent and detached. Allow the natural course of events to unfold.",
+        "6": "When good intentions are met with misfortune, accept this and let the situation unfold naturally. Wait patiently and stay open. Misunderstandings and mistakes can lead to greater understanding and growth."
+    },
+    "The Taming Power of the Great": {
+        "0": "The Taming Power of the Great signifies the taming and harnessing of significant power. It encourages maintaining inner balance and humility in the face of great power and using it wisely and ethically. The hexagram warns against ego-generated barriers and suggests achieving balance between our own needs and those of others.",
+        "1": "Warns against acting impulsively in times of danger. Instead, trust the process and allow space for resolution.",
+        "2": "In times of difficulty, it advises patience and faith in the process. This approach allows for a build up of creative energy for future endeavours.",
+        "3": "Persevere with awareness of danger and practice self-discipline. A way forward may open up by restraining lower impulses and renewing humility.",
+        "4": "Control strong emotions to have a meaningful impact on others. Acting with a calm and understanding attitude brings great good fortune.",
+        "5": "Maintaining neutrality and restraining desires can lead to inner freedom. This self-mastery positively impacts the situation and brings good fortune.",
+        "6": "Success is achieved when inner obstacles are overcome through modesty and perseverance. This signifies a positive outcome and attaining the way of heaven."
+    },
+    "Providing Nourishment": {
+        "0": "Discover the ways in which your mind seeks sustenance, and learn the art of inner cleansing through meditation.",
+        "1": "A timely warning about envy and self-pity, with the power of calm meditation to restore balance.",
+        "2": "Unmasking the perils of straying from one's path and the rewards of upholding personal values.",
+        "3": "A reality check on the pursuit of pleasure, and the fulfilment found in embracing life's challenges.",
+        "4": "The importance of proper self-nourishment and how it leads to personal growth and unity with others.",
+        "5": "Identifying weaknesses and the crucial steps needed to strengthen oneself for better outcomes.",
+        "6": "Humility and self-discipline - the keys to influence, accomplishment, and alignment with the cosmos."
+    },
+    "Preponderance of the Great": {
+        "0": "Turn pivotal moments into profound success through modesty, patience, and trust in a Higher Power.",
+        "1": "Cautiousness, patience, and meticulous planning - the secrets to laying solid foundations for grand projects.",
+        "2": "An insight into growth in relationships and situations, and the importance of a humble attitude.",
+        "3": "A warning against recklessness and the power of vigilance in avoiding setbacks.",
+        "4": "Humility in leadership: the influence of personal example over charm or success.",
+        "5": "Recognising the indispensability of a strong foundation in relationships or endeavours.",
+        "6": "Cautions against overconfidence, and the importance of maintaining firm principles and responsibility."
+    },
+    "The Abysmal (Water)": {
+        "0": "Uncover life's mysteries and face your deepest fears with Hexagram 29. It serves as a guide through uncertainty and chaos, teaching the value of patience, integrity, and humility. The principles in this hexagram offer invaluable lessons for personal growth and resilience.",
+        "1": "Learn the pitfalls of haste and how even a hint of doubt can lead to deviation from your path.",
+        "2": "Teaches the importance of mindfulness and caution during perilous times, advising us to seek small gains and flow with the currents of life.",
+        "3": "Discover the dangers of ambition and expectations with the third line. Learn to maintain inner detachment, recognise the divine will, and focus on principles over time-based goals.",
+        "4": "Offers a lifeline in times of doubt and confusion. Discover the power of sincerity and guidance in illuminating your path.",
+        "5": "Understand the critical importance of timing with the fifth line. Learn the power of patience and the art of being content with the present moment.",
+        "6": "Warns of the perils of stubbornness and ego-driven decisions. Embrace the power of patience, selflessness, and perseverance in your journey towards truth and goodness."
+    },
+    "The Clinging Fire": {
+        "0": "Promotes detachment, acceptance, and adaptability amid change. Highlights the role of truth in dispelling doubt and balancing life's challenges. Success is accessible through perseverance and moral principles.",
+        "1": "Highlights deliberate action's importance. Success depends on careful action and setting the correct initial tone.",
+        "2": "Encourages balance and perspective in varying situations. Advocates for understanding, conscientiousness, and flexibility in interactions.",
+        "3": "Warns against attachment to outcomes or timelines. Advises embracing the present, trusting life's flow, and welcoming growth opportunities.",
+        "4": "Cautions against negative influences hindering progress. Stresses perseverance, patience, and a steady mind for achieving success.",
+        "5": "Indicates attitude shift leading to inner harmony. Emphasises the necessity of humility, sincerity, and acceptance in facing difficulties.",
+        "6": "Recommends suppressing ego's destructive aspects. Encourages self-acceptance and emotional awareness to overcome obstacles, fostering a balanced life approach."
+    },
+    "Influence": {
+        "0": "Dive into the quiet yet powerful influence of a strong personality, the art of attraction beyond seduction, and the value of an open, receptive mind during change. Learn to shield from selfish influences while promoting positivity.",
+        "1": "A tiny beginning with enormous potential. How can checking our inner attitudes lead to success? Learn to foster positivity for lasting influence.",
+        "2": "Rushing into situations can be perilous. Uncover the wisdom of patience and how it can steer us clear of negative emotions.",
+        "3": "Let inner wisdom guide your path. Learn how resisting external pressures can fortify your dignity and positive influence.",
+        "4": "Is inner calm key to positive influence? Dive into the tranquility within and its power to shape the world outside.",
+        "5": "Navigate complex situations with ease. Learn how being adaptable and receptive to guidance can help avoid remorse.",
+        "6": "Words can't always sway minds. Understand the importance of actions in shaping perceptions, and discover the guiding light of the Sage on your journey."
+    },
+    "Duration": {
+        "0": "Symbolises the resilient horse—strength, resilience, grace—in every determined step. Highlights timeless wisdom urging steadfastness to values amid worldly distractions.",
+        "1": "Advocates patience and incremental progress. Trust the process and your capabilities. Every moment is crucial to success.",
+        "2": "Warns against ego's allure. Stay composed and centred. Your real strength is in the heart—your guiding beacon against worldly headwinds.",
+        "3": "Discourages comparison. Stay focused on your principles and goals. It's the journey, not the destination, that grants life depth and meaning.",
+        "4": "Focus on character over outcomes. Remain humble and sincere. Understanding when to push and when to yield is wisdom.",
+        "5": "Every path is unique. Trust others' potential, set a good example, and concentrate on your journey. Self-growth and discipline lead to greatness.",
+        "6": "Do not allow restlessness to linger. Amid relentless change, trust the universe, stay patient and detached. Let the universe guide you to enlightenment."
+    },
+    "Retreat": {
+        "0": "Immerse in the wisdom of Hexagram 33, 'Retreat,' a guide on embracing disengagement during periods of conflict and self-imposed ego. Learn how to maintain perseverance in challenging times and adapt to new ways of living.",
+        "1": "Understand the importance of disengaging from negativity, restoring inner balance and maintaining well being by retreating into a state of stillness.",
+        "2": "Uncover the true nature of justice, not enforced by ego, but obtained through the guidance of our higher self and the practice of compassionate leadership.",
+        "3": "Learn to stay true to your inner voice amidst external chaos, fostering willpower and sincerity as shields against negativity.",
+        "4": "Grasp the importance of avoiding unnecessary conflicts and preserving your integrity, a key strategy against the struggles of ego-driven competition.",
+        "5": "Learn about friendly retreat - maintaining firm determination and responsibility towards your higher values, an essential defence against falling into dangerous intrigues.",
+        "6": "Experience the joy and relief of strategic retreat, an optimistic outlook that can bring good fortune and open up new opportunities for growth."
+    },
+    "The Power of the Great": {
+        "0": "Unveil the profound understanding of power, its proper use, and the dangers of the unchecked ego. Grasp the concept of true greatness.",
+        "1": "Uncover wisdom about the use and misuse of power, and the significance of humility and restraint.",
+        "2": "Dive deep into the principle of perseverance and humility for achieving success.",
+        "3": "Explore how the non-aggressive use of power leads to harmony and a fruitful path forward.",
+        "4": "Gain insights into the inner strength that overcomes obstacles and achieves goals.",
+        "5": "Learn the transformative power of releasing negativity and embracing forgiveness.",
+        "6": "Understand the consequences of excessive power and the importance of correction and perseverance."
+    },
+    "Progress": {
+        "0": "Provides a deep understanding of advancement, stressing flexibility, adaptation, and humility. Warns against ego indulgence during success and encourages personal virtue enhancement and higher good pursuit.",
+        "1": "Underlines persistence and positivity despite setbacks. Advocates patience and principle commitment.",
+        "2": "Highlights importance of value adherence, even when alone. Suggests moral principles lead to fruitful progress and right companions.",
+        "3": "Discourages dwelling on weaknesses, emphasises perseverance and unity. Reinforces staying on the correct path for collective progress.",
+        "4": "Warns against ego and self-righteousness in success, promotes humility, ethical conduct, and faith in truth.",
+        "5": "Encourages detachment from immediate gains or losses, focusing on the big picture and greater good. Advocates a long-term perspective and momentary growth opportunities.",
+        "6": "Discourages hostility and aggression, advocates respectful treatment of others and self-improvement as the path to success."
+    },
+    "Darkening of the Light": {
+        "0": "Encourages caution during adversity. It explores losing faith, confusion, and feelings of disconnection, and calls on one to reconnect with their inner guidance.",
+        "1": "Advises against striving for visible progress, promoting a focus on the inner light and staying true to one's values.",
+        "2": "Speaks of perseverance in the face of challenges. It inspires trust in one's inner strength and determination.",
+        "3": "Promotes persistence in addressing complex issues. It underscores the importance of vigilance and overcoming negative patterns.",
+        "4": "Advises releasing negative thoughts and actions. It encourages an honest examination of our motivations to aid progress.",
+        "5": "Calls for maintaining inner strength in the face of external darkness. It relates to enduring challenges with an invincible spirit.",
+        "6": "Emphasises steadfastness in truth and righteousness in the face of overwhelming adversity. A reminder of the potential for transformation even in darkness."
+    },
+    "The Family": {
+        "0": "Highlights the significance of healthy relationships within any family unit. Suggests self-correction as a way to inspire and influence others positively.",
+        "1": "Counsels firmness in relationships and warns against giving in to ego. Advocates for clear boundaries and standing up for personal beliefs.",
+        "2": "Advises against forcing influence, promoting humility, patience, and a focus on the present moment. Encourages maintaining correct thoughts and values.",
+        "3": "Stresses the importance of reserve when faced with ego. Recommends maintaining balance and composure when navigating difficult situations.",
+        "4": "Underlines doing things for the right reasons and resisting self-interest. Urges reflection on motives and prioritising others' welfare.",
+        "5": "Highlights the power of good character. Suggests disengaging from those who do not share the same values to focus on self-improvement.",
+        "6": "Emphasises adherence to highest values despite challenges. Advocates for inner strength and resilience, and the positive ripple effect of embodying these qualities."
+    },
+    "Opposition": {
+        "0": "Advocates for understanding the hidden force behind our actions, finding the balance in conflict, and the importance of compromise.",
+        "1": "Patience and balance are key to this hexagram. Rather than forcing unity, meet others halfway and maintain integrity.",
+        "2": "Conflict may arise from misunderstandings. Remain open to unexpected solutions to find harmony.",
+        "3": "Stay resilient in adversity. Remember, true joy isn't dependent on external circumstances.",
+        "4": "Wrong ideas may lead to isolation. Trust in the cosmic order and follow the right path to regain inner joy.",
+        "5": "Look beyond surface appearances to work through misunderstandings. Communicate openly and honestly.",
+        "6": "Let go of defensiveness, and approach situations with maturity to overcome opposition."
+    },
+    "Obstruction": {
+        "0": "Obstructions in one's path are depicted in this hexagram, suggesting both physical and internal hurdles. It advocates perseverance, openness, adaptability, and patience as key to overcoming these challenges.",
+        "1": "Don't resist difficulties but retreat and wait for the right moment to act. This line emphasises the importance of patience and learning from situations.",
+        "2": "Avoid blaming yourself or others for the obstructions encountered. Instead, focus on just and correct actions. Letting go of judgments creates an opportunity for growth.",
+        "3": "Avoid recklessness in the face of obstacles. Cultivate inner stillness and detachment to open up to new possibilities and overcome any hurdle.",
+        "4": "Progress isn't always linear. Remain patient and adapt to the challenges encountered. Step back, allow time, and focus on perseverance to navigate through obstacles.",
+        "5": "In challenging situations, support can arrive from unexpected quarters. Maintain openness and sincerity to awaken sensitivity and clarity in others.",
+        "6": "Embrace your inner strength and take action to overcome challenges. Indifference will not lead to change, but faith in your abilities will guide you through obstacles."
+    },
+    "Deliverance": {
+        "0": "Deliverance from what holds us back, recognising the right time for change, learning from conflicts, forgiving others, maintaining balance and not forcing progress - all these aspects hide in Hexagram 40. Curious? Get our app or book for the complete interpretation.",
+        "1": "Delivers a message of success and relief, emphasising inner harmony and openness to new experiences. For a deeper understanding, explore with our app or book.",
+        "2": "Discover Line 2's key to deliverance - identifying and combating false, ego-flattering ideas. It's more intriguing than you might think! Uncover the mystery in our app or book.",
+        "3": "Warns against arrogance post-success. Want to know how to stay alert and maintain independence? Find your answers with our app or book.",
+        "4": "Stresses the need to release oneself from inferior influences. Curious about what this could mean for you? Our app or book will guide you through.",
+        "5": "Speaks of a turning point, requiring firm determination and a strong will. Dive into this critical juncture with us.",
+        "6": "Humility and guidance hold the key to true freedom. Discover how to approach relationships from the correct perspective. Excited? Join us in our app or book for the full exploration."
+    },
+    "Decrease": {
+        "0": "Promotes sacrifice and ego reduction for greater good. Encourages recognising limitations, resourceful use of assets, and flexibility. A reminder that letting go can lead to growth, understanding, and stronger connections.",
+        "1": "Promote selflessness and detachment. Don't seek recognition, set good examples instead. Maintain correct thoughts, a detached attitude, and a neutral approach.",
+        "2": "Retain dignity and principles while aiding others. Don't enable negativity, stay true to values. Support others without compromising self.",
+        "3": "Let go of harmful elements for positive change. Be selective about influences. Surrender ego and fears to embrace wisdom.",
+        "4": "Correct personal faults to overcome obstacles. Foster innocence and openness, heed the Sage's guidance rather than blaming others.",
+        "5": "Service to others brings success, not just personal gain. Stay committed to the good and true to attract positive energy and opportunities.",
+        "6": "Cultivate self-discipline and self-reliance, avoid exploiting others. Be generous, focusing on elevating others over control. True increase comes from personal and others' growth."
+    },
+    "Increase": {
+        "0": "Increase signifies a promising period of improvement, guided by Higher Powers. Embrace this, but beware of becoming careless; humility and conscientiousness are key.",
+        "1": "Use your good fortune to accomplish great deeds. Humility and compassion can help unlock others' potential and encourage personal growth.",
+        "2": "Constant perseverance leads to good fortune. Remain committed to pursuing the good and true, and cosmic law will ensure success.",
+        "3": "Find enrichment in adversity. By staying true to your inner self, turn challenges into opportunities for self-discovery.",
+        "4": "Embrace the role of a wise intermediary in this time of growth. Prioritise the needs of others and follow the path of service and self-improvement.",
+        "5": "Act with kindness and compassion, even when challenged. Strive to be patient, moderate, and just in all interactions.",
+        "6": "Help others to maintain a strong foundation of success. Balance, generosity, and correctness are essential for the time of Increase to continue."
+    },
+    "Breakthrough (Resoluteness)": {
+        "0": "Breakthrough is about decisive action in complex situations. It reflects the mandate of heaven - the ruler's divine right to rule justly. It encourages openness to new ways of thinking, bold action, and steadfastness even amidst uncertainty.",
+        "1": "Avoid the pitfalls of overconfidence. Resist the urge to resolve everything at once. Stay calm, grounded and don't let ego lead you astray.",
+        "2": "Stay alert and prepared. Vigilance enables you to handle challenges efficiently, and it prevents surprises.",
+        "3": "Resist hasty decisions. Stay patient until a clear understanding is achieved. Seek help if needed but maintain a firm resolve.",
+        "4": "Avoid imposing your will due to restlessness. Rely on your inner sense of rightness, and let things unfold naturally.",
+        "5": "Uproot deep-seated habits with firm resolve. Stay balanced and follow the middle path. Persevere in doing what's right, accepting life as it comes.",
+        "6": "Don't let premature celebrations or complacency hinder true resolution. Uphold principles of equality and justice consistently for proper completion."
+    },
+    "Coming to Meet": {
+        "0": "The hexagram embodies balance and harmony, promoting mutual respect in relationships. It warns against compromising dignity and becoming entangled in detrimental situations.",
+        "1": "Highlights the need for early control over negative emotions to prevent them from gaining momentum.",
+        "2": "Encourages gentle control over impulses and emotions, focusing on self-reflection and inner balance.",
+        "3": "Advises against succumbing to the temptation to argue, recommending adherence to inner truth instead.",
+        "4": "Promotes tolerance and compassion when faced with challenging behaviour from others.",
+        "5": "Suggests gentle, subtle influence over others through actions rather than words.",
+        "6": "Recommends disengagement when challenged by hostility, advocating for tolerance and composure."
+    },
+    "Gathering Together": {
+        "0": "Advocates for collective strength and change guided by a principled leader. Stresses self-improvement, ethical conduct, and inner discipline. Avoid overconfidence.",
+        "1": "Resist ego and doubts. Maintain humility, acceptance, and innocence amidst challenges for balance and success.",
+        "2": "Balance in relationships comes naturally. Avoid forced harmony. Emphasise authenticity and openness for positive outcomes.",
+        "3": "Hold steadfast in self-improvement despite isolation. Submit to higher wisdom. Humility, tolerance, and sincerity are vital during change.",
+        "4": "Celebrate selfless efforts towards common good. Success arises from community welfare over personal gain, despite obstacles.",
+        "5": "Maintain inner independence amidst group resistance. Conscientious behaviour and self-improvement overcome resistance.",
+        "6": "In doubt, seek guidance. Stay patient and persistent. Deep understanding and support foster enduring progress."
+    },
+    "Pushing Upward": {
+        "0": "Achieve growth and progress by being patient, grounded, and persistent in your efforts. Embrace the process of self-improvement and the Taoist principle of natural growth and change. Attain higher consciousness by rising above material distractions and temptations.",
+        "1": "To progress, rely on the guidance and support of a higher power or spiritual wisdom. Stay humble and sincere in your spiritual journey.",
+        "2": "Sincerity is vital for progress. Focus on aligning your character with ethical principles, maintaining humility, and resisting the temptation to seek recognition.",
+        "3": "In the face of inner conflicts, focus on aligning with the Sage and work on your inner growth for success.",
+        "4": "Achieve success through sincere self-improvement and self-examination. Your spiritual existence and growth are confirmed through these diligent efforts.",
+        "5": "Self-improvement is a series of small steps. Focus on each step, knowing when to seize opportunities and when to withdraw for renewal. Success is standing firm and correct during challenges.",
+        "6": "Avoid blindly pushing forward. Seize moments of humility and receptivity, maintaining inner independence and alertness. Disengage ego and ambition to preserve your most valuable asset."
+    },
+    "Oppression (Exhaustion)": {
+        "0": "Warns against letting oppressive beliefs hinder spiritual growth. Accept things as they are, remain calm and patient in adversity, and let the universe's creative power work. Stay grounded and persistent, and you can overcome oppression.",
+        "1": "Find solutions within yourself. Cultivate a balanced, cheerful attitude and resist doubt. A positive outlook can unlock new perspectives and unseen solutions.",
+        "2": "Resist impatience and negative views that block unity with the Sage. Cultivate gratitude and patience, and allow the Higher Power to renew your strength.",
+        "3": "Avoid restless effort and forcing unwelcome changes. Accept the present moment, let go of attachment to outcomes, and be open to new possibilities.",
+        "4": "Break free from fixed ideas that limit progress. Seek the wisdom of the Sage and remain open-minded to navigate towards a fulfilling path.",
+        "5": "Even superior people face difficulties. Remain humble, rely on inner truth, let go of resistance, and approach the situation calmly and open-mindedly to overcome obstructions.",
+        "6": "Don't let small doubts grow into negativity that overpowers your determination. Stand firm against despair, recognise help when it arrives, and stay mindful of your progress."
+    },
+    "The Well": {
+        "0": "The Well symbolises universal truth and spiritual nourishment. Keep your character clean and reliable like a well. Be free of personal motives, avoid overwhelm, seek help if needed, and stay sincere, simple, and serene. Remain true to your character and nourish yourself and others with your wisdom.",
+        "1": "Avoid getting distracted by trivialities. Focus on what is important and behave according to your values. Respect proper principles.",
+        "2": "Failure to cultivate inner qualities leads to a broken jug that can't hold water. Let go of pride and commit to self-improvement.s",
+        "3": "Trust and follow your inner guidance to benefit from your wisdom. Let go of defences, be receptive to new experiences, and cultivate a deep trust in yourself and the universe.",
+        "4": "The right time might still be ahead. Focus on self-development and prepare for the future. Trust in the success of those who are actively working on themselves.",
+        "5": "Use knowledge and wisdom. Don't let fear or negativity prevent you from implementing what you know. Trust in your experiences and put your learnings into practice.",
+        "6": "Achieving inner wealth attracts external abundance. Overcome obstacles to understanding, bear with others' mistakes, and practice compassion."
+    },
+    "Revolution": {
+        "0": "Change requires revolutionising your attitude. Develop inner independence, overcome fears, and trust the Unknown. Your personal revolution can influence others. Remain calm and adaptable during change, and stay clear about your purpose.",
+        "1": "Maintain an open mind and act only when necessary. Practice patience, humility, and non-action, even if misunderstood.",
+        "2": "Be steadfast in character and gain the confidence of others. Avoid complacency. Maintain a balanced alertness. Strengthen your humility before action.",
+        "3": "Lasting changes require patience and a balanced approach. Wait patiently through the change process without rushing or hesitating. Maintain a detached and modest attitude.",
+        "4": "True revolution comes from justice and detachment. Embody your values. Be firm, just, open, and receptive. Demand change based on universal principles, not whims.",
+        "5": "Leaders aligned with higher principles bring about transformative change, earning the support of the people. Maintain a strong connection with your values.",
+        "6": "Superficial change won't last. Devote yourself to wisdom, be patient, and make consistent effort for lasting transformation. Seek help from a higher power and persevere in pursuit of change."
+    },
+    "The Cauldron": {
+        "0": "Symbolises sacrifice, spiritual growth, and divine nourishment. Keep your thoughts pure, let go of resistance, and surrender your ego. Balance self-care with nurturing others. Attain spiritual growth through sacrifice.",
+        "1": "Let go of pride and stay open-minded. Do not hold onto negative impressions. Focus on doing worthwhile things. Let go of negative habits for growth and progress.",
+        "2": "Stability can attract envy. Remain firm, innocent, and avoid flattery or manipulation. Stay true to your values to prevent harm and continue growth.",
+        "3": "Let go of doubt and inner conflict to attain spirituality. Sacrifice self-interest and cultivate humility. If you feel blocked, examine your ego.",
+        "4": "Avoid self-absorption and stay connected with your inner voice. Remain alert, do not neglect your values. Be mindful of your potential.",
+        "5": "Sacrifice pride and remain approachable. Stay correct and retreat from what is inferior. Selflessness and correct behaviour can lead to success.",
+        "6": "Emulate the Sage in interactions with others. Maintain your path and persevere with gentleness and purity. Be a source of guidance and inspiration."
+    },
+    "The Arousing (Shock)": {
+        "0": "Shocking events can discredit current beliefs and allow re-evaluation of perspectives. This hexagram emphasises openness and flexibility to handle changes. If threatened, withdraw into stillness and meditation. Deepen your understanding to gain strength from your true self.",
+        "1": "Shock can be an opportunity for growth and transformation, despite the initial discomfort. Confront and overcome challenges to develop resilience.",
+        "2": "Don't dwell on past losses. Contemplate and redefine the situation as a learning opportunity. Stay open and receptive to life's lessons.",
+        "3": "Avoid negativity in face of Shock. Maintain inner stillness, stay open-minded to see solutions and stay positive.",
+        "4": "Do not let Shock hinder growth. Accept the situation, learn and gain a new perspective. Abandon old thinking patterns and embrace open-mindedness.",
+        "5": "Stay centred amidst recurring shocks. Remain connected to inner truth and stay open to insights revealed through the experience.",
+        "6": "Avoid getting absorbed in the drama of Shock. Withdraw and find inner stillness for clarity and understanding. Let go of the need to control or fix the situation to prevent misfortune."
+    },
+    "Keeping Still": {
+        "0": "Amid chaotic or difficult situations, seek inner peace and stillness, avoiding decisions made in fear or impulsiveness. Achieve clarity and creativity through inner detachment and peace obtained from practices like meditation.",
+        "1": "In this time of pause and reflection, maintain your detachment and innocence. Remain still and steadfast, focusing on self-reflection and inner growth.",
+        "2": "Resist the impulse to act due to ego-driven fear, doubt, or desire. Abandon attachment to outcomes, maintaining stillness and detachment, allowing conditions for the Sage to act.",
+        "3": "Work on achieving inner calm without force or resistance. Let go of negative elements causing distress, accepting the unknown and offering no resistance. This cultivates trust and allows the Sage's guidance.",
+        "4": "Inner peace is obtained by letting go of fear and desire. This stillness and acceptance promotes a positive attitude, faith in life's flow, and a sense of calm amidst chaos.",
+        "5": "When inner tranquillity hasn't been reached, control your words and actions to prevent negative influences. Be reserved in speech and maintain tranquillity at all levels.",
+        "6": "Amid criticism and resistance, persevere in stillness in thought and action with a noble heart. This leads to lasting peace of mind unaffected by external opinions or actions."
+    },
+    "Gradual Progress": {
+        "0": "Advises maintaining steady, consistent efforts rather than seeking immediate results. It emphasizes the need for adaptability to life's changes and staying committed to our principles even in adversity.",
+        "1": "Counsels patience and steadfastness in the face of doubt and fear, trusting in the slow but steady progress of self-development.",
+        "2": "Reminds us of our duty to help others and share our good fortune, warning against selfishness and complacency during times of peace and harmony.",
+        "3": "Advises disengagement and non resistance in challenging situations, highlighting every challenge as an opportunity for growth and self-improvement.",
+        "4": "Emphasises the importance of yielding and adapting to circumstances in navigating difficulties, promoting non resistance and trust in the natural flow of events.",
+        "5": "Highlights that periods of isolation are part of self-development, advising patience and perseverance through such times with trust in the path of goodness and truth.",
+        "6": "Underscores staying committed to our path and being responsive to present changes can lead to great success and serve as an inspiring example to others."
+    },
+    "The Marrying Maiden": {
+        "0": "Unravel the marrying maiden's symbolisation, understand your choices, and learn to establish relationships based on ethical principles. Find your balance in masculine and feminine energies, form alliances wisely, and learn the power of surrender.",
+        "1": "Understand how to accept limited influence over a situation, maintain composure, and focus on the essentials.",
+        "2": "Discover how faith, perseverance, and a focus on truth can lead to success even under challenging circumstances.",
+        "3": "Learn the pitfalls of ego-driven desires and self-indulgence, and the value of acknowledging mistakes.",
+        "4": "Discover the virtue of patience, the discipline of waiting, and the beauty of letting things develop naturally.",
+        "5": "Find out how to handle positions of advantage and disadvantage without falling into arrogance or envy.",
+        "6": "Learn the importance of true devotion, sacrifice, and the need for complete commitment to the right path."
+    },
+    "Abundance": {
+        "0": "Grasp the teachings of abundance cycles in your life. Learn to stay humble during prosperity, mindful of the needs of others, and how to foster different forms of abundance in your life beyond material wealth.",
+        "1": "Discover the importance of acknowledging and respecting the cyclical nature of influence. Learn when to seize the opportunity and when to withdraw, maintaining a clear, balanced perspective.",
+        "2": "Embrace trust and humility to overcome mistrust or envy, and maintain a strong connection to your inner truth even in challenging circumstances.",
+        "3": "Unveil how ego and pride can lead to loss of influence. Learn patience and humility, and the value of impermanence in moments of power.",
+        "4": "Find the importance of staying humble and energetic even in the face of success to avoid complacency and sustain progress.",
+        "5": "Learn the power of truth and humility that aids in making right decisions, creating harmony, and achieving success in challenging situations.",
+        "6": "Avoid self-centredness in abundance. Understand the importance of humility, generosity, and compassion in creating a positive and abundant world."
+    },
+    "The Wanderer": {
+        "0": "Unveil the cosmic secrets of life as a wanderer in the vast universe, maintaining your relationship with the Higher Power and staying in harmony with universal justice and truth. Learn the art of overcoming conflicts and finding your true self.",
+        "1": "Discover the importance of mindful use of time and energy, focusing on the essential, and avoiding distractions.",
+        "2": "Learn how modesty and generosity are keys to finding rest and gaining the support of loyal friends.",
+        "3": "Experience the significance of humility and acceptance in overcoming ego and internal conflicts.",
+        "4": "Understand the dangers of succumbing to desires not aligned with your path, and the importance of attention to your inner self.",
+        "5": "Learn the art of letting go of attachments for greater progress and aligning your thoughts and actions with your true values.",
+        "6": "Understand the dangers of complacency and the need for constant vigilance and commitment to your journey."
+    },
+    "The Gentle": {
+        "0": "Uncover the potency of humility and correct inner attitude that guides you to profound insights. Learn about the 'gentleman' or 'scholar' who demonstrates virtue, culture, and decency.",
+        "1": "Learn how the perseverance of the warrior brings success. Understand the power of focus on inner truth, and the wisdom of staying calm amidst conflict.",
+        "2": "Be alerted to hidden enemies within you such as negative thoughts and emotions, and the power of seeking help to overcome these inner obstacles.",
+        "3": "Gain insights into maintaining balance and detaching from harmful internal conflicts. Discover how not dwelling on self-doubt can lead to successful progress.",
+        "4": "Understand the interconnectedness of your internal struggles with external problems. Learn how modesty, independence, and correctness lead to effortless success.",
+        "5": "Grasp the wisdom of ending the old to begin anew. Realise the strength in letting go of harmful elements and the opportunities it paves for a fresh start.",
+        "6": "Learn about the importance of humility and self-improvement, even when the 'inferior enemy' within remains unidentified. Understand the fine line between self-confidence and inner independence."
+    },
+    "The Joyous, Lake": {
+        "0": "Advises finding joy within and staying adaptable to maintain peace. True happiness stems from balance, good relations, and embracing life's pleasures.",
+        "1": "Contentment arises from inner harmony and detachment from desires. Your truth and goodness influence others, even if subtly.",
+        "2": "Avoid reliance on past solutions. Maintain authenticity and principles for good fortune. Don't compromise for temporary gain.",
+        "3": "Desires can disrupt inner peace. Focus on inner worth, independent of external approval. Inner independence fosters real joy.",
+        "4": "Don't sacrifice values for progress. Desire-driven actions cause suffering. Resist ego temptations to uphold inner harmony.",
+        "5": "Resist selfish motivations. Let go of unhealthy relationships and negativity to embrace truth. Rewards aren't the ultimate goal.",
+        "6": "Beware of ego-driven fantasies and self-importance. Humility and authenticity prevent derailment, guiding you towards true joy."
+    },
+    "Dispersion": {
+        "0": "Embrace change, dissolve rigid thoughts, and cultivate inner development. Discover the key to transformation through gentleness, adaptability, and faith in change.",
+        "1": "Address misunderstandings promptly and with an open mind. Practice decisive action and determination in mending relationships.",
+        "2": "Cultivate patience and goodwill. Understand others' viewpoints and accept the present moment to allow for healing and growth.",
+        "3": "Dissolve defensive barriers and negative feelings. Embrace change, foster deeper connections, and seek inner peace.",
+        "4": "Act with integrity and avoid societal conformity. Inspire others with your commitment to justice and uphold your principles for ultimate good fortune.",
+        "5": "Dissipate negative thoughts and foster shared purpose. Understand the power of letting go and the wisdom of the universe.",
+        "6": "Avoid dwelling on negative emotions. Strive for harmony with the universe, inspiring change in others while leading them away from misfortune."
+    },
+    "Limitation": {
+        "0": "Navigate the challenges of setting reasonable limits and avoiding excess with our I Ching-based app. Discover the importance of humility, cooperation, compromise, and balance in the pursuit of steady progress.",
+        "1": "Navigate the importance of respecting boundaries and exercising self-restraint to avoid blame. With our app, you can build a solid foundation for success and growth.",
+        "2": "Understand the power of timing and awareness. Learn when to retreat and when to take action with our app's insightful guidance.",
+        "3": "Avoid the dangers of self-importance and indulge in humility. Use our app to focus on your true purpose and make strides towards your goals.",
+        "4": "Master the art of working with limitations rather than against them. Use our app to guide your journey through the path of least resistance.",
+        "5": "Guide or limit others effectively by first learning to limit yourself. Discover the power of gentle, truthful interactions with our app's guidance.",
+        "6": "In times of crisis, understand the necessity of limitations for protection. Our app offers guidance on maintaining kindness and compassion during times of restraint."
+    },
+    "Inner Truth": {
+        "0": "Unravel the secrets to tackling complex situations: inner truth. Abandon prejudices, embrace understanding, and learn from the subtle symbols of the hexagram.",
+        "1": "Strengthen your core values through inward and outward commitment. With our app, learn to recognise and overcome hidden barriers for a unity with higher truth.",
+        "2": "Project your true self to others. Nurture your thoughts and values to emanate inner strength. Be authentic; let your light shine.",
+        "3": "Safeguard your inner balance despite the noise. With our app, learn to rely on your inner truth and achieve self-sufficiency.",
+        "4": "Appreciate your power and abundance while preserving humility. Let our app remind you of the true source of your strength, ensuring good fortune.",
+        "5": "Bring unity through the power of inner truth. Stand firm in your principles and inspire a culture of honesty and integrity.",
+        "6": "Encourage self-development through understanding, not coercion. Cultivate trust and respect through your words. Our app helps you promote open-mindedness and receptivity."
+    },
+    "Preponderance of the Small": {
+        "0": "Discover the power of non-action amidst life's turbulence. Shed rigid attitudes, embrace patience, and trust the guidance of the Creative. Success is on the horizon.",
+        "1": "Learn the value of patience and non-action in a hurried world. Allow our app to guide you in waiting for the right moment to act, avoiding premature missteps.",
+        "2": "Trust in the virtue of waiting. Resist rushing decisions and maintain an open mind, allowing life's events to unfold naturally with our app as your guide.",
+        "3": "Navigate uncertainty with caution and self-awareness. Resist ego-driven actions and trust in higher guidance. Our app can help maintain balance even in challenging situations.",
+        "4": "Avoid impulsive actions in the face of difficulty. Learn the value of yielding to fate and trusting higher guidance with our app.",
+        "5": "Recognise the power of unity in achieving your goals. Seek support from like-minded individuals. Let our app connect you with a community of learners.",
+        "6": "Combat pride and stubbornness, embrace humility and adaptability. Our app reminds you of the importance of ethical principles and the danger of resisting change."
+    },
+    "After Completion": {
+        "0": "Even in success, one should remain grounded in their principles. Hexagram 63 warns against the resurgence of ego and the decay of discipline. It also emphasises the importance of self-control and mindfulness.",
+        "1": "Advises caution and patience, especially under pressure. Success requires humility, willingness to learn, and resilience to navigate through difficult times.",
+        "2": "Encourages letting go of attachment to outcomes and focusing on inner development. Trust in the natural flow of events.",
+        "3": "Warns against letting our inferior qualities take over. Remain firm and maintain emotional independence to overcome weaknesses.",
+        "4": "Urges us to resist complacency. Even the most impressive accomplishments can unravel if we let our guard down. Stay focused on your goals.",
+        "5": "True greatness comes from an inner sense of modesty and acceptance. Gain respect through correcting errors and leading by example.",
+        "6": "Even amid success, stay focused on what is correct. Avoid getting too distracted by achievements, which can lead to mistakes."
+    },
+    "Before Completion": {
+        "0": "Illustrates transition and change, possibly in personal growth, business ventures, or political scenarios. It counsels for humility, inner peace, and trusting the process. Success in this phase rests on the abandonment of ego-driven responses and embracing modesty and inner balance.",
+        "1": "Promotes patience and clarity before action, cautioning against impulsive moves. Reflect and understand the situation before taking any action.",
+        "2": "Avoid idle waiting and daydreaming. Maintain focus on your goals and stay tuned to your inner truth.",
+        "3": "In times of obstacles, resist impulsive reactions. Keep a steady course and let situations unfold naturally for success.",
+        "4": "Discipline and perseverance are vital to overcoming challenges. Stay true to your values and persist on your chosen path.",
+        "5": "In the face of adversity, steadfastness can illuminate the path to wisdom and achieving your goals.",
+        "6": "Beware of complacency and ego in times of progress. Stay grounded, avoid temptation, and continue to uphold your values for sustained growth."
+    },
+    "Hexagram Reference": {
+        "link": "https://aiching.app/i-ching-hexagrams/"
+    }
 }
