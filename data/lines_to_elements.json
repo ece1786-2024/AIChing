@@ -1,0 +1,98 @@
+{
+    "PPP": {
+        "lower": {
+            "0": "jia zi water",
+            "1": "jia yin wood",
+            "2": "jia chen soil"
+        },
+        "upper": {
+            "0": "ren wu fire",
+            "1": "ren shen gold",
+            "2": "ren xu soil"
+        }
+    },
+    "NPN": {
+        "lower": {
+            "0": "wu yin wood",
+            "1": "wu chen soil",
+            "2": "wu wu fire"
+        },
+        "upper": {
+            "0": "wu shen gold",
+            "1": "wu xu soil",
+            "2": "wu zi water"
+        }
+    },
+    "NNP": {
+        "lower": {
+            "0": "bing chen soil",
+            "1": "bing wu fire",
+            "2": "bing shen gold"
+        },
+        "upper": {
+            "0": "bing xu soil",
+            "1": "bing zi water",
+            "2": "bing yin wood"
+        }
+    },
+    "PNN": {
+        "lower": {
+            "0": "geng zi water",
+            "1": "geng yin wood",
+            "2": "geng hen soil"
+        },
+        "upper": {
+            "0": "geng wu fire",
+            "1": "geng shen gold",
+            "2": "geng xu soil"
+        }
+    },
+    "NPP": {
+        "lower": {
+            "0": "xin chou soil",
+            "1": "xin xuan water",
+            "2": "xin you gold"
+        },
+        "upper": {
+            "0": "xin wei soil",
+            "1": "xin si fire",
+            "2": "xin mao wood"
+        }
+    },
+    "PNP": {
+        "lower": {
+            "0": "ji mao wood",
+            "1": "ji chou soil",
+            "2": "ji hai water"
+        },
+        "upper": {
+            "0": "ji you gold",
+            "1": "ji wei soil",
+            "2": "ji si fire"
+        }
+    },
+    "NNN": {
+        "lower": {
+            "0": "yi wei soil",
+            "1": "yi si fire",
+            "2": "yi mao wood"
+        },
+        "upper": {
+            "0": "gui chou soil",
+            "1": "gui hai water",
+            "2": "gui you gold"
+        }
+    },
+    "PPN": {
+        "lower": {
+            "0": "ding si fire",
+            "1": "ding mao wood",
+            "2": "ding chou soil"
+        },
+        "upper": {
+            "0": "ding hai water",
+            "1": "ding you gold",
+            "2": "ding wei soil"
+        }
+    }
+}
