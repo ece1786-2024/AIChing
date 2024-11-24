@@ -4,36 +4,36 @@ import datetime
 import math
 import itertools
 
-with open("../data/index_to_lines.json", "r", encoding="utf-8") as infile:
-    index_to_lines = json.load(infile)
-
-with open("../data/lines_to_index.json", "r", encoding="utf-8") as infile:
-    lines_to_index = json.load(infile)
-
-with open("../data/index_to_name.json", "r", encoding="utf-8") as infile:
-    index_to_name = json.load(infile)
+with open("../data/gua_attrs.json", "r", encoding="utf-8") as infile:
+    gua_attrs = json.load(infile)
 
 with open("../data/detail_gua_info_eng.json", "r", encoding="utf-8") as infile:
     detail_gua_info = json.load(infile)
+
+with open("../data/lines_to_elements.json", "r", encoding="utf-8") as infile:
+    lines_to_elements = json.load(infile)
+
+with open("../data/lines_to_index.json", "r", encoding="utf-8") as infile:
+    lines_to_index = json.load(infile)
 
 TIAN_GAN = "jia,yi,bing,ding,wu,ji,geng,xin,ren,gui".split(",")
 DI_ZHI = "zi,chou,yin,mao,chen,si,wu,wei,shen,you,xu,hai".split(",")
 
 
-def retrieve_information(original_index, alter_index, alter_list):
-    original_info = detail_gua_info[str(original_index)]
+def retrieve_information(primary_index, alter_index, alter_list):
+    primary_info = detail_gua_info[str(primary_index)]
     alter_info = detail_gua_info[str(alter_index)]
-    ignore_field = set(["description", "philosophy", "scholar_interpretation"])
+    ignore_field = set(["description", "philosophy", "book_DuanYi"])
+    target_lines = [f"line_{i}" for i in alter_list]
+
     res = {}
-    res["original"] = {}
+    res["primary"] = {}
     res["alter"] = {}
-    for line_key in original_info:
-        res["original"][line_key] = {}
-        for field_key in original_info[line_key]:
+    for line_key in target_lines + ["general"]:
+        res["primary"][line_key] = {}
+        for field_key in primary_info[line_key]:
             if field_key not in ignore_field:
-                res["original"][line_key][field_key] = original_info[line_key][
-                    field_key
-                ]
+                res["primary"][line_key][field_key] = primary_info[line_key][field_key]
 
     alter_line_keys = [f"line_{i}" for i in alter_list]
     for line_key in alter_line_keys:
@@ -45,14 +45,36 @@ def retrieve_information(original_index, alter_index, alter_list):
     return res
 
 
+def format_gua_info(gua_info):
+    res = """
+    # Primary Hexagram: {primary_gua_name}
+    ## General Information
+        - Description: {primary_general_desc}
+        - Traditional Interpretation: {primary_general_trad_interp}
+        - Scholar Interpretation: {primary_general_scholar_interp}
+    ## Line Information
+        {all_line_info}
+    """
+
+    line_info = """
+        - Line {line_num}
+            - Description: {line_desc}
+            - Element: {line_element}
+            - Relation: {line_relation}
+            - Spirit: {line_spirit}
+            - Status: {line_status}
+            - Changed Description(If changed): {line_changed_desc}
+    """
+
+
 def get_altered_hexagram(hexagram_index, alter_list):
     # Load index_to_lines.json and lines_to_index.json
 
-    # Get the original string representation of the hexagram
-    original_lines = index_to_lines[str(hexagram_index)]
+    # Get the primary string representation of the hexagram
+    primary_lines = gua_attrs[str(hexagram_index)]["binary"]
 
-    # Convert the original string to a list to modify it
-    altered_lines = list(original_lines)
+    # Convert the primary string to a list to modify it
+    altered_lines = list(primary_lines)
 
     # Apply the alterations based on the alter_list
     for pos in alter_list:
@@ -67,7 +89,7 @@ def get_altered_hexagram(hexagram_index, alter_list):
     # Get the altered hexagram index from lines_to_index.json
     altered_hexagram_index = lines_to_index[altered_lines_string]
 
-    altered_hexagram_name = index_to_name[altered_hexagram_index]
+    altered_hexagram_name = gua_attrs[altered_hexagram_index]["name"]
 
     return altered_lines_string, altered_hexagram_index, altered_hexagram_name
 
@@ -256,11 +278,11 @@ def get_process_time():
 # from: gold, wood, water, fire, soil
 # given hexagram index, return an element
 def get_hexagram_element(hexagram_index):
-    assert hexagram_index >= 1 and hexagram_index <= 64
+    assert (
+        hexagram_index >= 1 and hexagram_index <= 64
+    ), f"Hexagram index out of range, expected 1-64, got {hexagram_index}"
     hexagram_index = str(hexagram_index)
-    with open("../data/index_to_element.json", "r", encoding="utf-8") as infile:
-        index_to_element = json.load(infile)
-    return index_to_element[hexagram_index]
+    return gua_attrs[hexagram_index]["element"]
 
 
 # get the (five)element of each line of the hexagram
@@ -272,11 +294,7 @@ def get_lines_elements(hexagram_index):
     # get the lines representation in "NP" string format
     assert hexagram_index >= 1 and hexagram_index <= 64
     hexagram_index = str(hexagram_index)
-    with open("../data/lines_to_elements.json", "r", encoding="utf-8") as infile:
-        lines_to_elements = json.load(infile)
-    with open("../data/index_to_lines.json", "r", encoding="utf-8") as infile:
-        index_to_lines = json.load(infile)
-    lines = index_to_lines[hexagram_index]
+    lines = gua_attrs[hexagram_index]["binary"]
     assert len(lines) == 6
     elements = []
 
@@ -298,7 +316,7 @@ def get_lines_elements(hexagram_index):
 
 # in ancient IChing, the "six spirits" are symbolic for each line of the hexagram
 # it helps to provide deeper interpretation
-def assign_spirits(day_zhi):
+def get_spirits(day_zhi):
     SPIRITS_ORDER = [
         "Azure Dragon",
         "Vermilion Bird",
@@ -328,60 +346,93 @@ def assign_spirits(day_zhi):
 # in ancient IChing, the "six relations" are symbolic for each line of the hexagram
 # it helps to provide deeper interpretation
 def get_relations(hexagram_element, line_elements):
-    # extract single element
-    line_elements = line_elements.split()[-1]
-    if line_elements == hexagram_element:
-        # same elements indicates siblings
+    # Extract the single element
+    line_element = line_elements.split()[-1]
+
+    # Define the relationship mappings
+    generation = {
+        "wood": "water",
+        "fire": "wood",
+        "soil": "fire",
+        "gold": "soil",
+        "water": "gold",
+    }
+
+    inverse_generation = {
+        "wood": "fire",
+        "fire": "soil",
+        "soil": "gold",
+        "gold": "water",
+        "water": "wood",
+    }
+
+    harmness = {
+        "wood": "gold",
+        "fire": "water",
+        "soil": "wood",
+        "gold": "fire",
+        "water": "soil",
+    }
+
+    inverse_harmness = {
+        "wood": "soil",
+        "fire": "gold",
+        "soil": "water",
+        "gold": "wood",
+        "water": "fire",
+    }
+
+    # Determine the relationship
+    if line_element == hexagram_element:
         return "Sibling"
-    elif (
-        line_elements
-        == {
-            "wood": "water",
-            "fire": "wood",
-            "soil": "fire",
-            "gold": "soil",
-            "water": "gold",
-        }[hexagram_element]
-    ):
-        # elements generation indicates parents
+    elif line_element == generation.get(hexagram_element):
         return "Parents"
-    elif (
-        line_elements
-        == {
-            "wood": "fire",
-            "fire": "soil",
-            "soil": "gold",
-            "gold": "water",
-            "water": "wood",
-        }[hexagram_element]
-    ):
-        # inverse generation indicates Children
+    elif line_element == inverse_generation.get(hexagram_element):
         return "Children"
-    elif (
-        line_elements
-        == {
-            "wood": "gold",
-            "fire": "water",
-            "soil": "wood",
-            "gold": "fire",
-            "water": "soil",
-        }[hexagram_element]
-    ):
-        # harmness indicates Demons
+    elif line_element == harmness.get(hexagram_element):
         return "Demons"
-    elif (
-        line_elements
-        == {
-            "wood": "soil",
-            "fire": "gold",
-            "soil": "water",
-            "gold": "wood",
-            "water": "fire",
-        }[hexagram_element]
-    ):
-        # inverse harmness indicates Wife and Wealth
+    elif line_element == inverse_harmness.get(hexagram_element):
         return "Wife and Wealth"
-    return "None"
+    else:
+        return "None"
+
+
+def generate_shi_ying(hexagram_index):
+    bin_repr = gua_attrs[str(hexagram_index)]["binary"]
+    if bin_repr[:3] == bin_repr[3:]:
+        shi_yao = 6
+    else:
+        # 分析内外卦的爻位阴阳关系
+        di_yao_same = bin_repr[-1] == bin_repr[-4]
+        ren_yao_same = bin_repr[-2] == bin_repr[-5]
+        tian_yao_same = bin_repr[-3] == bin_repr[-6]
+
+        if tian_yao_same and not ren_yao_same and not di_yao_same:
+            shi_yao = 2
+        elif ren_yao_same and not tian_yao_same and not di_yao_same:
+            shi_yao = 4
+        elif di_yao_same and not tian_yao_same and not ren_yao_same:
+            shi_yao = 4
+        elif tian_yao_same and ren_yao_same and not di_yao_same:
+            shi_yao = 1
+        elif tian_yao_same and di_yao_same and not ren_yao_same:
+            shi_yao = 3
+        elif di_yao_same and ren_yao_same and not tian_yao_same:
+            shi_yao = 5
+        else:
+            shi_yao = 3
+
+    # 确定应爻位置
+    ying_yao = (shi_yao + 3) % 6
+    if ying_yao == 0:
+        ying_yao = 6
+
+    return {"shi": shi_yao, "ying": ying_yao}
+
+
+def get_shi_ying(hexagram_index):
+    info = gua_attrs[str(hexagram_index)]
+    return info["shi"], info["ying"]
 
 
 # get lines details which includes:
@@ -389,7 +440,7 @@ def get_relations(hexagram_element, line_elements):
 # spirits of each line
 # relations of each line
 def get_lines_details(hexagram_index, day_gan, first_index=None):
-    if first_index == None:
+    if first_index is None:
         hexagram_element = get_hexagram_element(hexagram_index)
     else:
         # this is the second hexagram
@@ -397,9 +448,10 @@ def get_lines_details(hexagram_index, day_gan, first_index=None):
         hexagram_element = get_hexagram_element(first_index)
 
     elements_sequence = get_lines_elements(hexagram_index)
+    shi_pos, ying_pos = get_shi_ying(hexagram_index)
 
     # calclate the sprits order
-    spirits_sequence = assign_spirits(day_gan)
+    spirits_sequence = get_spirits(day_gan)
 
     assert len(elements_sequence) == 6 and len(spirits_sequence) == 6
 
@@ -408,12 +460,16 @@ def get_lines_details(hexagram_index, day_gan, first_index=None):
     for i, ele in enumerate(elements_sequence):
         relation = get_relations(hexagram_element, ele)
         spirit = spirits_sequence[i]
+        shi_or_ying = (
+            "Shi" if i + 1 == shi_pos else "Ying" if i + 1 == ying_pos else "None"
+        )
         line_details.append(
             {
                 "line": f"{i+1}",
                 "elements": ele,
                 "relations": relation,
                 "spirits": spirit,
+                "shi_ying": shi_or_ying,
             }
         )
 
