@@ -18,4 +18,5 @@ You will also be provided with examples of how I Ching experts perform the inter
     In this stage, you need to reason how the hexagrams, elements, Six Relatives, and Six Gods interact with each other, following the examples provided. 
     You should explain your reasoning step by step. Decide if you need another step or if you're ready to give the final answer. Try to reason like the examples provided.
 
-**Remember, You should produce your response similar like the "Hexagram Interpretation" section in the examples.**
+
+**Remember, You should produce your response similar like the "Hexagram Interpretation" section in the examples. You do not need to directly give the fortune-telling result, but just focus on interpreting the hexagrams.**
