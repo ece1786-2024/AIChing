@@ -1,0 +1,450 @@
+{
+    "1": {
+        "binary": "PPPPPP",
+        "name": "The Creative",
+        "element": "gold",
+        "shi": 6,
+        "ying": 3
+    },
+    "2": {
+        "binary": "NNNNNN",
+        "name": "The Receptive",
+        "element": "soil",
+        "shi": 6,
+        "ying": 3
+    },
+    "3": {
+        "binary": "PNNNPN",
+        "name": "Difficulty at the Beginning",
+        "element": "water",
+        "shi": 4,
+        "ying": 1
+    },
+    "4": {
+        "binary": "NPNNNP",
+        "name": "Youthful Folly",
+        "element": "fire",
+        "shi": 2,
+        "ying": 5
+    },
+    "5": {
+        "binary": "PPPNPN",
+        "name": "Waiting (Nourishment)",
+        "element": "soil",
+        "shi": 4,
+        "ying": 1
+    },
+    "6": {
+        "binary": "NPNPPP",
+        "name": "Conflict",
+        "element": "fire",
+        "shi": 4,
+        "ying": 1
+    },
+    "7": {
+        "binary": "NPNNNN",
+        "name": "The Army",
+        "element": "water",
+        "shi": 3,
+        "ying": 6
+    },
+    "8": {
+        "binary": "NNNNPN",
+        "name": "Holding Together",
+        "element": "soil",
+        "shi": 3,
+        "ying": 6
+    },
+    "9": {
+        "binary": "PPPNPP",
+        "name": "The Taming Power of the Small",
+        "element": "wood",
+        "shi": 5,
+        "ying": 2
+    },
+    "10": {
+        "binary": "PPNPPP",
+        "name": "Treading (Conduct)",
+        "element": "soil",
+        "shi": 1,
+        "ying": 4
+    },
+    "11": {
+        "binary": "PPPNNN",
+        "name": "Peace",
+        "element": "soil",
+        "shi": 3,
+        "ying": 6
+    },
+    "12": {
+        "binary": "NNNPPP",
+        "name": "Stanstill (Stagnation)",
+        "element": "gold",
+        "shi": 3,
+        "ying": 6
+    },
+    "13": {
+        "binary": "PNPPPP",
+        "name": "Fellowship with others",
+        "element": "fire",
+        "shi": 3,
+        "ying": 6
+    },
+    "14": {
+        "binary": "PPPPNP",
+        "name": "Possession in Great Measure",
+        "element": "gold",
+        "shi": 3,
+        "ying": 6
+    },
+    "15": {
+        "binary": "NNPNNN",
+        "name": "Modesty",
+        "element": "gold",
+        "shi": 1,
+        "ying": 4
+    },
+    "16": {
+        "binary": "NNNPNN",
+        "name": "Enthusiasm",
+        "element": "wood",
+        "shi": 5,
+        "ying": 2
+    },
+    "17": {
+        "binary": "PNNPPN",
+        "name": "Following",
+        "element": "wood",
+        "shi": 3,
+        "ying": 6
+    },
+    "18": {
+        "binary": "NPPNNP",
+        "name": "Work on What Has Been Spoiled (Decay)",
+        "element": "wood",
+        "shi": 3,
+        "ying": 6
+    },
+    "19": {
+        "binary": "PPNNNN",
+        "name": "Approach",
+        "element": "soil",
+        "shi": 4,
+        "ying": 1
+    },
+    "20": {
+        "binary": "NNNNPP",
+        "name": "Contemplation",
+        "element": "gold",
+        "shi": 2,
+        "ying": 5
+    },
+    "21": {
+        "binary": "PNNPNP",
+        "name": "Biting Through",
+        "element": "wood",
+        "shi": 1,
+        "ying": 4
+    },
+    "22": {
+        "binary": "PNPNNP",
+        "name": "Grace",
+        "element": "soil",
+        "shi": 5,
+        "ying": 2
+    },
+    "23": {
+        "binary": "NNNNNP",
+        "name": "Splitting Apart",
+        "element": "gold",
+        "shi": 1,
+        "ying": 4
+    },
+    "24": {
+        "binary": "PNNNNN",
+        "name": "Return",
+        "element": "soil",
+        "shi": 5,
+        "ying": 2
+    },
+    "25": {
+        "binary": "PNNPPP",
+        "name": "Innocence",
+        "element": "wood",
+        "shi": 2,
+        "ying": 5
+    },
+    "26": {
+        "binary": "PPPNNP",
+        "name": "The Taming Power of the Great",
+        "element": "soil",
+        "shi": 4,
+        "ying": 1
+    },
+    "27": {
+        "binary": "PNNNNP",
+        "name": "Providing Nourishment",
+        "element": "wood",
+        "shi": 4,
+        "ying": 1
+    },
+    "28": {
+        "binary": "NPPPPN",
+        "name": "Preponderance of the Great",
+        "element": "wood",
+        "shi": 4,
+        "ying": 1
+    },
+    "29": {
+        "binary": "NPNNPN",
+        "name": "The Abysmal (Water)",
+        "element": "water",
+        "shi": 6,
+        "ying": 3
+    },
+    "30": {
+        "binary": "PNPPNP",
+        "name": "The Clinging Fire",
+        "element": "fire",
+        "shi": 6,
+        "ying": 3
+    },
+    "31": {
+        "binary": "NNPPPN",
+        "name": "Influence",
+        "element": "gold",
+        "shi": 3,
+        "ying": 6
+    },
+    "32": {
+        "binary": "NPPPNN",
+        "name": "Duration",
+        "element": "wood",
+        "shi": 3,
+        "ying": 6
+    },
+    "33": {
+        "binary": "NNPPPP",
+        "name": "Retreat",
+        "element": "gold",
+        "shi": 4,
+        "ying": 1
+    },
+    "34": {
+        "binary": "PPPPNN",
+        "name": "The Power of the Great",
+        "element": "soil",
+        "shi": 2,
+        "ying": 5
+    },
+    "35": {
+        "binary": "NNNPNP",
+        "name": "Progress",
+        "element": "gold",
+        "shi": 4,
+        "ying": 1
+    },
+    "36": {
+        "binary": "PNPNNN",
+        "name": "Darkening of the Light",
+        "element": "water",
+        "shi": 4,
+        "ying": 1
+    },
+    "37": {
+        "binary": "PNPNPP",
+        "name": "The Family",
+        "element": "wood",
+        "shi": 4,
+        "ying": 1
+    },
+    "38": {
+        "binary": "PPNPNP",
+        "name": "Opposition",
+        "element": "soil",
+        "shi": 2,
+        "ying": 5
+    },
+    "39": {
+        "binary": "NNPNPN",
+        "name": "Obstruction",
+        "element": "gold",
+        "shi": 2,
+        "ying": 5
+    },
+    "40": {
+        "binary": "NPNPNN",
+        "name": "Deliverance",
+        "element": "wood",
+        "shi": 4,
+        "ying": 1
+    },
+    "41": {
+        "binary": "PPNNNP",
+        "name": "Decrease",
+        "element": "soil",
+        "shi": 3,
+        "ying": 6
+    },
+    "42": {
+        "binary": "PNNNPP",
+        "name": "Increase",
+        "element": "wood",
+        "shi": 3,
+        "ying": 6
+    },
+    "43": {
+        "binary": "PPPPPN",
+        "name": "Breakthrough (Resoluteness)",
+        "element": "soil",
+        "shi": 1,
+        "ying": 4
+    },
+    "44": {
+        "binary": "NPPPPP",
+        "name": "Coming to Meet",
+        "element": "gold",
+        "shi": 5,
+        "ying": 2
+    },
+    "45": {
+        "binary": "NNNPPN",
+        "name": "Gathering Together",
+        "element": "gold",
+        "shi": 4,
+        "ying": 1
+    },
+    "46": {
+        "binary": "NPPNNN",
+        "name": "Pushing Upward",
+        "element": "wood",
+        "shi": 2,
+        "ying": 5
+    },
+    "47": {
+        "binary": "NPNPPN",
+        "name": "Oppression (Exhaustion)",
+        "element": "gold",
+        "shi": 5,
+        "ying": 2
+    },
+    "48": {
+        "binary": "NPPNPN",
+        "name": "The Well",
+        "element": "wood",
+        "shi": 1,
+        "ying": 4
+    },
+    "49": {
+        "binary": "PNPPPN",
+        "name": "Revolution",
+        "element": "water",
+        "shi": 2,
+        "ying": 5
+    },
+    "50": {
+        "binary": "NPPPNP",
+        "name": "The Cauldron",
+        "element": "fire",
+        "shi": 4,
+        "ying": 1
+    },
+    "51": {
+        "binary": "PNNPNN",
+        "name": "The Arousing (Shock)",
+        "element": "wood",
+        "shi": 6,
+        "ying": 3
+    },
+    "52": {
+        "binary": "NNPNNP",
+        "name": "Keeping Still",
+        "element": "soil",
+        "shi": 6,
+        "ying": 3
+    },
+    "53": {
+        "binary": "NNPNPP",
+        "name": "Gradual Progress",
+        "element": "soil",
+        "shi": 3,
+        "ying": 6
+    },
+    "54": {
+        "binary": "PPNPNN",
+        "name": "The Marrying Maiden",
+        "element": "gold",
+        "shi": 3,
+        "ying": 6
+    },
+    "55": {
+        "binary": "PNPPNN",
+        "name": "Abundance",
+        "element": "water",
+        "shi": 1,
+        "ying": 4
+    },
+    "56": {
+        "binary": "NNPPNP",
+        "name": "The Wanderer",
+        "element": "fire",
+        "shi": 5,
+        "ying": 2
+    },
+    "57": {
+        "binary": "NPPNPP",
+        "name": "The Gentle",
+        "element": "wood",
+        "shi": 6,
+        "ying": 3
+    },
+    "58": {
+        "binary": "PPNPPN",
+        "name": "The Joyous, Lake",
+        "element": "gold",
+        "shi": 6,
+        "ying": 3
+    },
+    "59": {
+        "binary": "NPNNPP",
+        "name": "Dispersion",
+        "element": "fire",
+        "shi": 1,
+        "ying": 4
+    },
+    "60": {
+        "binary": "PPNNPN",
+        "name": "Limitation",
+        "element": "water",
+        "shi": 5,
+        "ying": 2
+    },
+    "61": {
+        "binary": "PPNNPP",
+        "name": "Inner Truth",
+        "element": "soil",
+        "shi": 4,
+        "ying": 1
+    },
+    "62": {
+        "binary": "NNPPNN",
+        "name": "Preponderance of the Small",
+        "element": "gold",
+        "shi": 4,
+        "ying": 1
+    },
+    "63": {
+        "binary": "PNPNPN",
+        "name": "After Completion",
+        "element": "water",
+        "shi": 3,
+        "ying": 6
+    },
+    "64": {
+        "binary": "NPNPNP",
+        "name": "Before Completion",
+        "element": "fire",
+        "shi": 3,
+        "ying": 6
+    }
+}

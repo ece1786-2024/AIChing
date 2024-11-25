@@ -14,3 +14,5 @@ A good answer could be:
 The lost item may be in a hidden spot indoors and requires help from family members to find it. Alternatively, waiting for the right time may also be necessary.
 
 Your tone should be professional, reliable, but a sense of mystery and wisdom.
+
+**Remember, You should produce your response similar like the "Answer" section in the examples.**

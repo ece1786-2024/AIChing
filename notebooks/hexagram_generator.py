@@ -4,6 +4,8 @@ import datetime
 import math
 import itertools
 
+from mdutils.mdutils import MdUtils
+
 with open("../data/gua_attrs.json", "r", encoding="utf-8") as infile:
     gua_attrs = json.load(infile)
 
@@ -20,11 +22,15 @@ TIAN_GAN = "jia,yi,bing,ding,wu,ji,geng,xin,ren,gui".split(",")
 DI_ZHI = "zi,chou,yin,mao,chen,si,wu,wei,shen,you,xu,hai".split(",")
 
 
-def retrieve_information(primary_index, alter_index, alter_list):
+def retrieve_information(
+    primary_index, alter_index, alter_list, primary_line_details, alter_line_details
+):
     primary_info = detail_gua_info[str(primary_index)]
     alter_info = detail_gua_info[str(alter_index)]
-    ignore_field = set(["description", "philosophy", "book_DuanYi"])
-    target_lines = [f"line_{i}" for i in alter_list]
+    ignore_field = set(
+        ["description", "philosophy", "book_DuanYi", "interpretation_scholar"]
+    )
+    target_lines = [f"line_{i}" for i in range(1, 7)]
 
     res = {}
     res["primary"] = {}
@@ -33,38 +39,85 @@ def retrieve_information(primary_index, alter_index, alter_list):
         res["primary"][line_key] = {}
         for field_key in primary_info[line_key]:
             if field_key not in ignore_field:
-                res["primary"][line_key][field_key] = primary_info[line_key][field_key]
+                res["primary"][line_key][field_key] = primary_info[line_key][
+                    field_key
+                ].replace("\n", "\t\t\n")
+        if line_key == "general":
+            res["primary"]["general"]["name"] = gua_attrs[str(primary_index)]["name"]
+            continue
+        for attr_key in primary_line_details[line_key]:
+            res["primary"][line_key][attr_key] = primary_line_details[line_key][
+                attr_key
+            ]
 
     alter_line_keys = [f"line_{i}" for i in alter_list]
     for line_key in alter_line_keys:
         res["alter"][line_key] = {}
         for field_key in alter_info[line_key]:
             if field_key not in ignore_field:
-                res["alter"][line_key][field_key] = alter_info[line_key][field_key]
+                res["alter"][line_key][field_key] = alter_info[line_key][
+                    field_key
+                ].replace("\n", "\t\t\n")
+        for attr_key in alter_line_details[line_key]:
+            res["alter"][line_key][attr_key] = alter_line_details[line_key][attr_key]
 
     return res
 
 
 def format_gua_info(gua_info):
-    res = """
-    # Primary Hexagram: {primary_gua_name}
-    ## General Information
-        - Description: {primary_general_desc}
-        - Traditional Interpretation: {primary_general_trad_interp}
-        - Scholar Interpretation: {primary_general_scholar_interp}
-    ## Line Information
-        {all_line_info}
-    """
+    mdFile = MdUtils(file_name="")
+    mdFile.new_header(level=1, title="")
+    mdFile.new_header(level=2, title="Hexagram Information")
 
-    line_info = """
-        - Line {line_num}
-            - Description: {line_desc}
-            - Element: {line_element}
-            - Relation: {line_relation}
-            - Spirit: {line_spirit}
-            - Status: {line_status}
-            - Changed Description(If changed): {line_changed_desc}
-    """
+    # Primary Hexagram Heading
+    mdFile.new_header(
+        level=2, title=f"Primary Hexagram: {gua_info['primary']['general']['name']}"
+    )
+
+    # General Information
+    mdFile.new_header(level=3, title="General Information")
+    mdFile.new_list(
+        items=[
+            f"Description: {gua_info['primary']['general']['interpretation']}",
+            f"Traditional Interpretation: {gua_info['primary']['general']['traditional']}",
+            f"Scholar Interpretation: {gua_info['primary']['general']['scholar_interpretation']}",
+        ]
+    )
+
+    # Line Information
+    mdFile.new_header(level=3, title="Line Information")
+    line_list = [f"line_{i}" for i in range(1, 7)]
+    for line_key in line_list:
+        primary_line_info = gua_info["primary"][line_key]
+        content_list = [
+            f"Line {line_key[-1]}",
+            [
+                f"Description: {primary_line_info['interpretation']}",
+                f"Element: {primary_line_info['elements']}, Relation: {primary_line_info['relations']}, ",
+                f"Spirit: {primary_line_info['spirits']}",
+            ],
+        ]
+
+        if primary_line_info["shi_ying"] != "None":
+            content_list[-1].append(
+                f"Shi/Ying Line: {primary_line_info['shi_ying']}",
+            )
+        if line_key in gua_info["alter"]:
+            alter_line_info = gua_info["alter"][line_key]
+            content_list[-1].append(
+                "This line has changed. Line information after change:"
+            )
+            content_list.append(
+                [
+                    [
+                        f"Description: {alter_line_info['interpretation']}",
+                        f"Element: {alter_line_info['elements']}, Relation: {alter_line_info['relations']}",
+                    ]
+                ],
+            )
+        mdFile.new_list(content_list)
+
+    return mdFile.get_md_text(), mdFile
 
 
 def get_altered_hexagram(hexagram_index, alter_list):
@@ -275,11 +328,11 @@ def get_process_time():
 
 # get the (five)element of the hexagram
 # in ancient IChing, a hexagram would be categorized into a general element
-# from: gold, wood, water, fire, soil
+# from: Gold, Wood, Water, Fire, Soil
 # given hexagram index, return an element
 def get_hexagram_element(hexagram_index):
     assert (
-        hexagram_index >= 1 and hexagram_index <= 64
+        int(hexagram_index) >= 1 and int(hexagram_index) <= 64
     ), f"Hexagram index out of range, expected 1-64, got {hexagram_index}"
     hexagram_index = str(hexagram_index)
     return gua_attrs[hexagram_index]["element"]
@@ -292,7 +345,7 @@ def get_hexagram_element(hexagram_index):
 # http://www.360doc.com/content/24/0413/09/80823585_1120246594.shtml
 def get_lines_elements(hexagram_index):
     # get the lines representation in "NP" string format
-    assert hexagram_index >= 1 and hexagram_index <= 64
+    assert int(hexagram_index) >= 1 and int(hexagram_index) <= 64
     hexagram_index = str(hexagram_index)
     lines = gua_attrs[hexagram_index]["binary"]
     assert len(lines) == 6
@@ -351,35 +404,35 @@ def get_relations(hexagram_element, line_elements):
 
     # Define the relationship mappings
     generation = {
-        "wood": "water",
-        "fire": "wood",
-        "soil": "fire",
-        "gold": "soil",
-        "water": "gold",
+        "Wood": "Water",
+        "Fire": "Wood",
+        "Soil": "Fire",
+        "Gold": "Soil",
+        "Water": "Gold",
     }
 
     inverse_generation = {
-        "wood": "fire",
-        "fire": "soil",
-        "soil": "gold",
-        "gold": "water",
-        "water": "wood",
+        "Wood": "Fire",
+        "Fire": "Soil",
+        "Soil": "Gold",
+        "Gold": "Water",
+        "Water": "Wood",
     }
 
     harmness = {
-        "wood": "gold",
-        "fire": "water",
-        "soil": "wood",
-        "gold": "fire",
-        "water": "soil",
+        "Wood": "Gold",
+        "Fire": "Water",
+        "Soil": "Wood",
+        "Gold": "Fire",
+        "Water": "Soil",
     }
 
     inverse_harmness = {
-        "wood": "soil",
-        "fire": "gold",
-        "soil": "water",
-        "gold": "wood",
-        "water": "fire",
+        "Wood": "Soil",
+        "Fire": "Gold",
+        "Soil": "Water",
+        "Gold": "Wood",
+        "Water": "Fire",
     }
 
     # Determine the relationship
@@ -456,22 +509,19 @@ def get_lines_details(hexagram_index, day_gan, first_index=None):
     assert len(elements_sequence) == 6 and len(spirits_sequence) == 6
 
     # get relations
-    line_details = []
+    line_details = {}
     for i, ele in enumerate(elements_sequence):
         relation = get_relations(hexagram_element, ele)
         spirit = spirits_sequence[i]
         shi_or_ying = (
             "Shi" if i + 1 == shi_pos else "Ying" if i + 1 == ying_pos else "None"
         )
-        line_details.append(
-            {
-                "line": f"{i+1}",
-                "elements": ele,
-                "relations": relation,
-                "spirits": spirit,
-                "shi_ying": shi_or_ying,
-            }
-        )
+        line_details[f"line_{i+1}"] = {
+            "elements": ele,
+            "relations": relation,
+            "spirits": spirit,
+            "shi_ying": shi_or_ying,
+        }
 
     return line_details
 
@@ -521,3 +571,26 @@ def process():
         second_hexagram_name,
         second_details,
     )
+
+
+if __name__ == "__main__":
+    (
+        time_dict,
+        first_hexagram_index,
+        first_hexagram_name,
+        first_details,
+        alter_list,
+        second_hexagram_index,
+        second_hexagram_name,
+        second_details,
+    ) = process()
+
+    raw_gua_info = retrieve_information(
+        first_hexagram_index,
+        second_hexagram_index,
+        alter_list,
+        first_details,
+        second_details,
+    )
+    formatted_gua_info, _ = format_gua_info(raw_gua_info)
+    print(formatted_gua_info)
