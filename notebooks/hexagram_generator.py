@@ -110,7 +110,7 @@ def format_gua_info(gua_info):
             content_list.append(
                 [
                     [
-                        f"Description: {alter_line_info['interpretation']}",
+                        f"Description: {alter_line_info.get('interpretation', 'None')}",
                         f"Element: {alter_line_info['elements']}, Relation: {alter_line_info['relations']}",
                     ]
                 ],
@@ -378,6 +378,7 @@ def get_spirits(day_zhi):
         "White Tiger",
         "Black Tortoise",
     ]
+    print(f"my day zhi is: {day_zhi}")
     if day_zhi == "jia" or day_zhi == "yi":
         start_index = 0
     elif day_zhi == "bing" or day_zhi == "ding":
@@ -404,35 +405,35 @@ def get_relations(hexagram_element, line_elements):
 
     # Define the relationship mappings
     generation = {
-        "Wood": "Water",
-        "Fire": "Wood",
-        "Soil": "Fire",
-        "Gold": "Soil",
-        "Water": "Gold",
+        "wood": "water",
+        "fire": "wood",
+        "soil": "fire",
+        "gold": "soil",
+        "water": "gold",
     }
 
     inverse_generation = {
-        "Wood": "Fire",
-        "Fire": "Soil",
-        "Soil": "Gold",
-        "Gold": "Water",
-        "Water": "Wood",
+        "wood": "fire",
+        "fire": "soil",
+        "soil": "gold",
+        "gold": "water",
+        "water": "wood",
     }
 
     harmness = {
-        "Wood": "Gold",
-        "Fire": "Water",
-        "Soil": "Wood",
-        "Gold": "Fire",
-        "Water": "Soil",
+        "wood": "gold",
+        "fire": "water",
+        "soil": "wood",
+        "gold": "fire",
+        "water": "soil",
     }
 
     inverse_harmness = {
-        "Wood": "Soil",
-        "Fire": "Gold",
-        "Soil": "Water",
-        "Gold": "Wood",
-        "Water": "Fire",
+        "wood": "soil",
+        "fire": "gold",
+        "soil": "water",
+        "gold": "wood",
+        "water": "fire",
     }
 
     # Determine the relationship
@@ -546,6 +547,52 @@ def process():
     alter_list = random.sample(
         range(1, 7), num_elements
     )  # range(1, 7) generates numbers 1 through 6
+
+    # get the second hexagram
+    altered_string, second_hexagram_index, second_hexagram_name = get_altered_hexagram(
+        first_hexagram_index, alter_list
+    )
+
+    if len(alter_list) != 0:
+        second_details = get_lines_details(
+            int(second_hexagram_index),
+            time_dict["iching"]["day"]["stem"],
+            first_hexagram_index,
+        )
+    else:
+        second_details = None
+
+    return (
+        time_dict,
+        str(first_hexagram_index),
+        first_hexagram_name,
+        first_details,
+        alter_list,
+        str(second_hexagram_index),
+        second_hexagram_name,
+        second_details,
+    )
+
+
+def manual_process(first_index, ri_gan, manual_list=[]):
+    # get the time that user starts the hexagram generation process
+    time_dict = get_process_time()
+
+    # Manually change RI GAN
+    time_dict["iching"]["day"]["stem"] = ri_gan
+
+    # Manual first hexagram
+    first_hexagram_index = first_index
+    with open("../data/index_to_name.json", "r", encoding="utf-8") as infile:
+        index_to_name = json.load(infile)
+    first_hexagram_name = index_to_name[str(first_hexagram_index)]
+    first_details = get_lines_details(
+        first_hexagram_index, time_dict["iching"]["day"]["stem"]
+    )
+
+    # Manual get the lines to altered in a list
+
+    alter_list = manual_list
 
     # get the second hexagram
     altered_string, second_hexagram_index, second_hexagram_name = get_altered_hexagram(
