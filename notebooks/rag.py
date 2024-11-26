@@ -1,4 +1,5 @@
 import chromadb
+import os
 import pandas as pd
 from mdutils.mdutils import MdUtils
 from hexagram_generator import (
@@ -13,7 +14,13 @@ df["id"] = df["id"].astype(str)
 documents = list(df["Q"])
 all_ids = list(df["id"])
 client = chromadb.Client()
-collection = client.get_or_create_collection(name="iching")
+openai_ef = chromadb.utils.embedding_functions.OpenAIEmbeddingFunction(
+    model_name="text-embedding-3-small",
+    api_key=os.getenv("OPENAI_API_KEY"),
+)
+collection = client.get_or_create_collection(
+    name="iching", embedding_function=openai_ef
+)
 
 collection.upsert(ids=all_ids, documents=documents)
 
