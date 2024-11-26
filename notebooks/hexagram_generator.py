@@ -391,6 +391,8 @@ def get_spirits(day_zhi):
         start_index = 4
     elif day_zhi == "ren" or day_zhi == "gui":
         start_index = 5
+    else:
+        raise ValueError(f"Invalid day zhi: {day_zhi}")
 
     return list(
         itertools.islice(itertools.cycle(SPIRITS_ORDER), start_index, start_index + 6)
