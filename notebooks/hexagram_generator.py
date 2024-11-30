@@ -378,7 +378,7 @@ def get_spirits(day_zhi):
         "White Tiger",
         "Black Tortoise",
     ]
-    print(f"my day zhi is: {day_zhi}")
+    # print(f"my day zhi is: {day_zhi}")
     if day_zhi == "jia" or day_zhi == "yi":
         start_index = 0
     elif day_zhi == "bing" or day_zhi == "ding":
