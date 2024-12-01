@@ -22,6 +22,13 @@ TIAN_GAN = "jia,yi,bing,ding,wu,ji,geng,xin,ren,gui".split(",")
 DI_ZHI = "zi,chou,yin,mao,chen,si,wu,wei,shen,you,xu,hai".split(",")
 
 
+def get_alter_list(primary_id, alter_id):
+    primary_binary = gua_attrs[str(primary_id)]["binary"]
+    alter_binary = gua_attrs[str(alter_id)]["binary"]
+    diff_lines = [i + 1 for i in range(6) if primary_binary[i] != alter_binary[i]]
+    return diff_lines
+
+
 def retrieve_information(
     primary_index, alter_index, alter_list, primary_line_details, alter_line_details
 ):
@@ -79,14 +86,19 @@ def format_gua_info(gua_info):
     mdFile.new_list(
         items=[
             f"Description: {gua_info['primary']['general']['interpretation']}",
-            f"Traditional Interpretation: {gua_info['primary']['general']['traditional']}",
-            f"Scholar Interpretation: {gua_info['primary']['general']['scholar_interpretation']}",
+            f"Traditional Interpretation: {gua_info['primary']['general']['traditional']}"
+            if "traditional" in gua_info["primary"]["general"]
+            else "",
+            f"Scholar Interpretation: {gua_info['primary']['general']['scholar_interpretation']}"
+            if "scholar_interpretation" in gua_info["primary"]["general"]
+            else "",
         ]
     )
 
     # Line Information
     mdFile.new_header(level=3, title="Line Information")
     line_list = [f"line_{i}" for i in range(1, 7)]
+
     for line_key in line_list:
         primary_line_info = gua_info["primary"][line_key]
         content_list = [

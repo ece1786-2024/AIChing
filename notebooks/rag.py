@@ -7,9 +7,10 @@ from hexagram_generator import (
     retrieve_information,
     format_gua_info,
     gua_attrs,
+    get_alter_list,
 )
 
-df = pd.read_csv("../data/example.csv", sep="\t")
+df = pd.read_csv("../data/RAG_db_filtered.csv", sep="\t")
 df["id"] = df["id"].astype(str)
 documents = list(df["Q"])
 all_ids = list(df["id"])
@@ -47,9 +48,7 @@ def aggregate_info(examples):
         primary_details = get_lines_details(primary_id, t)
         alter_details = get_lines_details(alter_id, t, primary_id)
 
-        primary_binary = gua_attrs[primary_id]["binary"]
-        alter_binary = gua_attrs[alter_id]["binary"]
-        diff_lines = [i + 1 for i in range(6) if primary_binary[i] != alter_binary[i]]
+        diff_lines = get_alter_list(primary_id, alter_id)
 
         gua_info = retrieve_information(
             primary_id, alter_id, diff_lines, primary_details, alter_details
@@ -67,8 +66,6 @@ def format_examples(info):
         res.file_data_text += entry["gua_info"]
         res.new_header(level=2, title="Hexagram Interpretation")
         res.new_line(entry["Interp"])
-        res.new_header(level=2, title="Answer")
-        res.new_line(entry["A"])
         res.new_line()
 
     return res.get_md_text()
