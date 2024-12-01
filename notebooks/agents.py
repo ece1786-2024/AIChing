@@ -18,7 +18,15 @@ def termination_msg(x):
     return isinstance(x, dict) and "TERMINATE" == str(x.get("content", ""))[-9:].upper()
 
 
-def fortune_telling(question, first_index, ri_gan, alter_list, return_interp=False):
+def fortune_telling(
+    question,
+    first_index,
+    day_stem,
+    day_branch,
+    month_branch,
+    alter_list,
+    return_interp=False,
+):
     user = autogen.UserProxyAgent(
         name="User",
         code_execution_config=False,
@@ -78,7 +86,11 @@ def fortune_telling(question, first_index, ri_gan, alter_list, return_interp=Fal
         second_name,
         second_details,
     ) = hexagram_generator.manual_process(
-        first_index=first_index, ri_gan=ri_gan, manual_list=alter_list
+        first_index=first_index,
+        day_stem=day_stem,
+        day_branch=day_branch,
+        month_branch=month_branch,
+        manual_list=alter_list,
     )
 
     raw_gua_info = hexagram_generator.retrieve_information(

@@ -3,6 +3,7 @@ import random
 import datetime
 import math
 import itertools
+import pypinyin
 
 from mdutils.mdutils import MdUtils
 
@@ -20,6 +21,121 @@ with open("../data/lines_to_index.json", "r", encoding="utf-8") as infile:
 
 TIAN_GAN = "jia,yi,bing,ding,wu,ji,geng,xin,ren,gui".split(",")
 DI_ZHI = "zi,chou,yin,mao,chen,si,wu,wei,shen,you,xu,hai".split(",")
+
+
+def determine_status(yao, month_branch):
+    # Define the states of the five elements in each season
+    wuxing_states = {
+        "wood": {
+            "yin": "Prosperous",
+            "mao": "Prosperous",
+            "chen": "Confined",
+            "si": "Confined",
+            "wu": "Confined",
+            "wei": "Confined",
+            "shen": "Dead",
+            "you": "Dead",
+            "xu": "Dead",
+            "hai": "Prime",
+            "zi": "Prime",
+            "chou": "Resting",
+        },
+        "fire": {
+            "yin": "Prime",
+            "mao": "Prime",
+            "chen": "Resting",
+            "si": "Prosperous",
+            "wu": "Prosperous",
+            "wei": "Prime",
+            "shen": "Confined",
+            "you": "Confined",
+            "xu": "Confined",
+            "hai": "Dead",
+            "zi": "Dead",
+            "chou": "Dead",
+        },
+        "soil": {
+            "yin": "Dead",
+            "mao": "Dead",
+            "chen": "Prosperous",
+            "si": "Prime",
+            "wu": "Prime",
+            "wei": "Prosperous",
+            "shen": "Prime",
+            "you": "Prime",
+            "xu": "Prosperous",
+            "hai": "Confined",
+            "zi": "Confined",
+            "chou": "Prosperous",
+        },
+        "gold": {
+            "yin": "Dead",
+            "mao": "Dead",
+            "chen": "Prime",
+            "si": "Prime",
+            "wu": "Dead",
+            "wei": "Resting",
+            "shen": "Prosperous",
+            "you": "Prosperous",
+            "xu": "Prosperous",
+            "hai": "Prime",
+            "zi": "Prime",
+            "chou": "Prime",
+        },
+        "water": {
+            "yin": "Confined",
+            "mao": "Resting",
+            "chen": "Prime",
+            "si": "Dead",
+            "wu": "Dead",
+            "wei": "Resting",
+            "shen": "Prime",
+            "you": "Resting",
+            "xu": "Prime",
+            "hai": "Prosperous",
+            "zi": "Prosperous",
+            "chou": "Prime",
+        },
+    }
+
+    # Extract the five-element property (wuxing) from the yao string
+    wuxing = yao.split()[-1].lower()
+
+    # Check if the wuxing exists in the table
+    if wuxing not in wuxing_states:
+        return "Unknown wuxing property"
+
+    # Determine the state for the given month branch
+    return wuxing_states[wuxing][month_branch]
+
+
+def check_monthly_daily_clash(yao, month_branch, day_branch):
+    # 地支六冲对应表
+    liuchong = {
+        "zi": "wu",
+        "chou": "wei",
+        "yin": "shen",
+        "mao": "you",
+        "chen": "xu",
+        "si": "hai",
+        "wu": "zi",
+        "wei": "chou",
+        "shen": "yin",
+        "you": "mao",
+        "xu": "chen",
+        "hai": "si",
+    }
+
+    # 提取爻的地支
+    _, yao_branch, _ = yao.split()
+
+    # 判断月破
+    is_monthly_clash = liuchong[month_branch] == yao_branch
+
+    # 判断日破
+    is_daily_clash = liuchong[day_branch] == yao_branch
+
+    return is_monthly_clash, is_daily_clash
 
 
 def get_alter_list(primary_id, alter_id):
@@ -107,6 +223,7 @@ def format_gua_info(gua_info):
                 f"Description: {primary_line_info['interpretation']}",
                 f"Element: {primary_line_info['elements']}, Relation: {primary_line_info['relations']}, ",
                 f"Spirit: {primary_line_info['spirits']}",
+                f"Clash: {primary_line_info['clash']}, Status: {primary_line_info['status']}",
             ],
         ]
 
@@ -124,6 +241,7 @@ def format_gua_info(gua_info):
                     [
                         f"Description: {alter_line_info.get('interpretation', 'None')}",
                         f"Element: {alter_line_info['elements']}, Relation: {alter_line_info['relations']}",
+                        f"Status: {alter_line_info['status']}",
                     ]
                 ],
             )
@@ -328,10 +446,10 @@ def get_process_time():
             "hour": dt.hour,
         },
         "iching": {
-            "year": {"stem": getYearGanzhi(dt)[0], "brach": getYearGanzhi(dt)[1]},
-            "month": {"stem": getMonthGanzhi(dt)[0], "brach": getMonthGanzhi(dt)[1]},
-            "day": {"stem": getDayGanzhi(dt)[0], "brach": getDayGanzhi(dt)[1]},
-            "hour": {"stem": getHourGanzhi(dt)[0], "brach": getHourGanzhi(dt)[1]},
+            "year": {"stem": getYearGanzhi(dt)[0], "branch": getYearGanzhi(dt)[1]},
+            "month": {"stem": getMonthGanzhi(dt)[0], "branch": getMonthGanzhi(dt)[1]},
+            "day": {"stem": getDayGanzhi(dt)[0], "branch": getDayGanzhi(dt)[1]},
+            "hour": {"stem": getHourGanzhi(dt)[0], "branch": getHourGanzhi(dt)[1]},
         },
     }
 
@@ -507,19 +625,20 @@ def get_shi_ying(hexagram_index):
 # five elements of each line
 # spirits of each line
 # relations of each line
-def get_lines_details(hexagram_index, day_gan, first_index=None):
+def get_lines_details(
+    hexagram_index, day_stem, day_branch, month_branch, first_index=None
+):
     if first_index is None:
         hexagram_element = get_hexagram_element(hexagram_index)
     else:
         # this is the second hexagram
         # should use the first hexagram index to get general element
         hexagram_element = get_hexagram_element(first_index)
-
     elements_sequence = get_lines_elements(hexagram_index)
     shi_pos, ying_pos = get_shi_ying(hexagram_index)
 
     # calclate the sprits order
-    spirits_sequence = get_spirits(day_gan)
+    spirits_sequence = get_spirits(day_stem)
 
     assert len(elements_sequence) == 6 and len(spirits_sequence) == 6
 
@@ -531,11 +650,23 @@ def get_lines_details(hexagram_index, day_gan, first_index=None):
         shi_or_ying = (
             "Shi" if i + 1 == shi_pos else "Ying" if i + 1 == ying_pos else "None"
         )
+        month_clash, day_clash = check_monthly_daily_clash(
+            ele, month_branch, day_branch
+        )
+        status = determine_status(ele, month_branch)
+        clash_status = ""
+        if month_clash:
+            clash_status += "Monthly Clash"
+        if day_clash:
+            clash_status += "Daily Clash"
+
         line_details[f"line_{i+1}"] = {
             "elements": ele,
             "relations": relation,
             "spirits": spirit,
             "shi_ying": shi_or_ying,
+            "clash": clash_status,
+            "status": status,
         }
 
     return line_details
@@ -550,7 +681,10 @@ def process():
         index_to_name = json.load(infile)
     first_hexagram_name = index_to_name[str(first_hexagram_index)]
     first_details = get_lines_details(
-        first_hexagram_index, time_dict["iching"]["day"]["stem"]
+        first_hexagram_index,
+        time_dict["iching"]["day"]["stem"],
+        time_dict["iching"]["day"]["branch"],
+        time_dict["iching"]["month"]["branch"],
     )
 
     # get the lines to altered in a list
@@ -571,6 +705,8 @@ def process():
         second_details = get_lines_details(
             int(second_hexagram_index),
             time_dict["iching"]["day"]["stem"],
+            time_dict["iching"]["day"]["branch"],
+            time_dict["iching"]["month"]["branch"],
             first_hexagram_index,
         )
     else:
@@ -588,12 +724,11 @@ def process():
     )
 
 
-def manual_process(first_index, ri_gan, manual_list=[]):
+def manual_process(first_index, day_stem, day_branch, month_branch, manual_list=[]):
     # get the time that user starts the hexagram generation process
     time_dict = get_process_time()
 
     # Manually change RI GAN
-    time_dict["iching"]["day"]["stem"] = ri_gan
 
     # Manual first hexagram
     first_hexagram_index = first_index
@@ -601,7 +736,10 @@ def manual_process(first_index, ri_gan, manual_list=[]):
         index_to_name = json.load(infile)
     first_hexagram_name = index_to_name[str(first_hexagram_index)]
     first_details = get_lines_details(
-        first_hexagram_index, time_dict["iching"]["day"]["stem"]
+        first_hexagram_index,
+        day_stem,
+        day_branch,
+        month_branch,
     )
 
     # Manual get the lines to altered in a list
@@ -616,7 +754,9 @@ def manual_process(first_index, ri_gan, manual_list=[]):
     if len(alter_list) != 0:
         second_details = get_lines_details(
             int(second_hexagram_index),
-            time_dict["iching"]["day"]["stem"],
+            day_stem,
+            day_branch,
+            month_branch,
             first_hexagram_index,
         )
     else:

@@ -33,7 +33,17 @@ def search(query, topk=3) -> pd.DataFrame:
     )
     ids = query_res["ids"][0]
     result = df[df["id"].isin(ids)]
-    keep_cols = ["id", "Q", "A", "Primary_id", "Alter_id", "Interp", "Day_Stem"]
+    keep_cols = [
+        "id",
+        "Q",
+        "A",
+        "Primary_id",
+        "Alter_id",
+        "Interp",
+        "Day_Stem",
+        "Day_Branch",
+        "Month_Branch",
+    ]
     result = result[keep_cols]
     return result.to_dict(orient="records")
 
@@ -41,12 +51,18 @@ def search(query, topk=3) -> pd.DataFrame:
 def aggregate_info(examples):
     res = []
     for entry in examples:
-        t = entry["Day_Stem"]
+        day_stem = entry["Day_Stem"]
+        day_branch = entry["Day_Branch"]
+        month_branch = entry["Month_Branch"]
         primary_id = str(entry["Primary_id"])
         alter_id = str(entry["Alter_id"])
 
-        primary_details = get_lines_details(primary_id, t)
-        alter_details = get_lines_details(alter_id, t, primary_id)
+        primary_details = get_lines_details(
+            primary_id, day_stem, day_branch, month_branch
+        )
+        alter_details = get_lines_details(
+            alter_id, day_stem, day_branch, month_branch, primary_id
+        )
 
         diff_lines = get_alter_list(primary_id, alter_id)
 
