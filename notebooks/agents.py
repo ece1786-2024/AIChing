@@ -26,6 +26,8 @@ def fortune_telling(
     month_branch,
     alter_list,
     return_interp=False,
+    simplify=False,
+    adviser=True,
 ):
     user = autogen.UserProxyAgent(
         name="User",
@@ -34,37 +36,48 @@ def fortune_telling(
         human_input_mode="NEVER",
         default_auto_reply="TERMINATE",
     )
-
-    agent_configs = {
-        "emotional": json.load(open("../agent_configs/emotional.json")),
-        "rational": json.load(open("../agent_configs/rational.json")),
-        "summary": json.load(open("../agent_configs/summary.json")),
-    }
     hexagram_agent = autogen.AssistantAgent(
         name="Hexagram_Interpreter",
         system_message=open("../agent_configs/jiegua.md").read(),
         llm_config=llm_config,
     )
     emotional_agent = autogen.AssistantAgent(
-        name=agent_configs["emotional"]["name"],
-        system_message=agent_configs["emotional"]["system_message"],
+        name="Adviser",
+        system_message=open("../agent_configs/adviser.md").read(),
         llm_config=llm_config,
     )
 
     rational_agent = autogen.AssistantAgent(
-        name=agent_configs["rational"]["name"],
+        name="Fortune_Teller",
         system_message=open("../agent_configs/rational.md").read(),
         llm_config=llm_config,
     )
 
-    summary_agent = autogen.AssistantAgent(
-        name=agent_configs["summary"]["name"],
-        system_message=agent_configs["summary"]["system_message"],
+    # summary_agent = autogen.AssistantAgent(
+    #     name=agent_configs["summary"]["name"],
+    #     system_message=agent_configs["summary"]["system_message"],
+    #     llm_config=llm_config,
+    # )
+
+    simplify_agent = autogen.AssistantAgent(
+        name="Simplify",
+        system_message="""
+We are going to perform I Ching fortune-telling for a user. 
+Now we gather many information that might related to the task, but it could be too much for incoming agents to understand. 
+So we need to simplify the information. Please remove some of the information that maybe not important for the task.
+The input also contains some examples related to the user's question, please don't remove them, but perform the simplification on them as well.
+Your answer should be and only be a simplified version of the input.
+
+""",
         llm_config=llm_config,
     )
-    members = [user, hexagram_agent]
+
+    members = [user]
+    members.append(hexagram_agent)
     if not return_interp:
         members.append(rational_agent)
+    if adviser:
+        members.append(emotional_agent)
 
     group_chat = autogen.GroupChat(
         agents=members,
@@ -116,6 +129,15 @@ def fortune_telling(
     message = message_content.format(
         hexagram_info=formatted_gua_info, question=question, example_text=example_text
     )
+
+    if simplify:
+        simplified_input = user.initiate_chat(
+            simplify_agent,
+            message=message,
+        )
+        message = simplified_input.chat_history[-2]["content"]
+        user.clear_history()
+
     res = user.initiate_chat(
         manager,
         message=message,
