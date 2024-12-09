@@ -7,17 +7,20 @@ import pypinyin
 
 from mdutils.mdutils import MdUtils
 
-with open("../data/gua_attrs.json", "r", encoding="utf-8") as infile:
-    gua_attrs = json.load(infile)
+with open("../data/hexagram_info/hexagram_attrs.json", encoding="utf-8") as infile:
+    hexagram_attrs = json.load(infile)
 
-with open("../data/detail_gua_info_eng.json", "r", encoding="utf-8") as infile:
+with open("../data/hexagram_info/detail_gua_info_eng.json", encoding="utf-8") as infile:
     detail_gua_info = json.load(infile)
 
-with open("../data/lines_to_elements.json", "r", encoding="utf-8") as infile:
+with open("../data/hexagram_info/lines_to_elements.json", encoding="utf-8") as infile:
     lines_to_elements = json.load(infile)
 
-with open("../data/lines_to_index.json", "r", encoding="utf-8") as infile:
+with open("../data/hexagram_info/lines_to_index.json", encoding="utf-8") as infile:
     lines_to_index = json.load(infile)
+
+with open("../data/hexagram_info/index_to_name.json", encoding="utf-8") as infile:
+    index_to_name = json.load(infile)
 
 TIAN_GAN = "jia,yi,bing,ding,wu,ji,geng,xin,ren,gui".split(",")
 DI_ZHI = "zi,chou,yin,mao,chen,si,wu,wei,shen,you,xu,hai".split(",")
@@ -110,7 +113,6 @@ def determine_status(yao, month_branch):
 
 
 def check_monthly_daily_clash(yao, month_branch, day_branch):
-    # 地支六冲对应表
     liuchong = {
         "zi": "wu",
         "chou": "wei",
@@ -126,21 +128,18 @@ def check_monthly_daily_clash(yao, month_branch, day_branch):
         "hai": "si",
     }
 
-    # 提取爻的地支
     _, yao_branch, _ = yao.split()
 
-    # 判断月破
     is_monthly_clash = liuchong[month_branch] == yao_branch
 
-    # 判断日破
     is_daily_clash = liuchong[day_branch] == yao_branch
 
     return is_monthly_clash, is_daily_clash
 
 
 def get_alter_list(primary_id, alter_id):
-    primary_binary = gua_attrs[str(primary_id)]["binary"]
-    alter_binary = gua_attrs[str(alter_id)]["binary"]
+    primary_binary = hexagram_attrs[str(primary_id)]["binary"]
+    alter_binary = hexagram_attrs[str(alter_id)]["binary"]
     diff_lines = [i + 1 for i in range(6) if primary_binary[i] != alter_binary[i]]
     return diff_lines
 
@@ -166,7 +165,9 @@ def retrieve_information(
                     field_key
                 ].replace("\n", "\t\t\n")
         if line_key == "general":
-            res["primary"]["general"]["name"] = gua_attrs[str(primary_index)]["name"]
+            res["primary"]["general"]["name"] = hexagram_attrs[str(primary_index)][
+                "name"
+            ]
             continue
         for attr_key in primary_line_details[line_key]:
             res["primary"][line_key][attr_key] = primary_line_details[line_key][
@@ -254,7 +255,7 @@ def get_altered_hexagram(hexagram_index, alter_list):
     # Load index_to_lines.json and lines_to_index.json
 
     # Get the primary string representation of the hexagram
-    primary_lines = gua_attrs[str(hexagram_index)]["binary"]
+    primary_lines = hexagram_attrs[str(hexagram_index)]["binary"]
 
     # Convert the primary string to a list to modify it
     altered_lines = list(primary_lines)
@@ -272,7 +273,7 @@ def get_altered_hexagram(hexagram_index, alter_list):
     # Get the altered hexagram index from lines_to_index.json
     altered_hexagram_index = lines_to_index[altered_lines_string]
 
-    altered_hexagram_name = gua_attrs[altered_hexagram_index]["name"]
+    altered_hexagram_name = hexagram_attrs[altered_hexagram_index]["name"]
 
     return altered_lines_string, altered_hexagram_index, altered_hexagram_name
 
@@ -322,7 +323,7 @@ def getJieqiList_byYear(year, jie_only=False, qi_only=False, addNum=False):
     except:
         return []
     res = []
-    if jie_only and qi_only:  # 两者相排斥
+    if jie_only and qi_only:
         raise KeyError
     if jie_only:
         for i in range(1, 25, 2):
@@ -465,7 +466,7 @@ def get_hexagram_element(hexagram_index):
         int(hexagram_index) >= 1 and int(hexagram_index) <= 64
     ), f"Hexagram index out of range, expected 1-64, got {hexagram_index}"
     hexagram_index = str(hexagram_index)
-    return gua_attrs[hexagram_index]["element"]
+    return hexagram_attrs[hexagram_index]["element"]
 
 
 # get the (five)element of each line of the hexagram
@@ -477,7 +478,7 @@ def get_lines_elements(hexagram_index):
     # get the lines representation in "NP" string format
     assert int(hexagram_index) >= 1 and int(hexagram_index) <= 64
     hexagram_index = str(hexagram_index)
-    lines = gua_attrs[hexagram_index]["binary"]
+    lines = hexagram_attrs[hexagram_index]["binary"]
     assert len(lines) == 6
     elements = []
 
@@ -584,11 +585,10 @@ def get_relations(hexagram_element, line_elements):
 
 
 def generate_shi_ying(hexagram_index):
-    bin_repr = gua_attrs[str(hexagram_index)]["binary"]
+    bin_repr = hexagram_attrs[str(hexagram_index)]["binary"]
     if bin_repr[:3] == bin_repr[3:]:
         shi_yao = 6
     else:
-        # 分析内外卦的爻位阴阳关系
         di_yao_same = bin_repr[-1] == bin_repr[-4]
         ren_yao_same = bin_repr[-2] == bin_repr[-5]
         tian_yao_same = bin_repr[-3] == bin_repr[-6]
@@ -608,7 +608,6 @@ def generate_shi_ying(hexagram_index):
         else:
             shi_yao = 3
 
-    # 确定应爻位置
     ying_yao = (shi_yao + 3) % 6
     if ying_yao == 0:
         ying_yao = 6
@@ -617,7 +616,7 @@ def generate_shi_ying(hexagram_index):
 
 
 def get_shi_ying(hexagram_index):
-    info = gua_attrs[str(hexagram_index)]
+    info = hexagram_attrs[str(hexagram_index)]
     return info["shi"], info["ying"]
 
 
@@ -726,14 +725,17 @@ def process():
 
 def manual_process(first_index, day_stem, day_branch, month_branch, manual_list=[]):
     # get the time that user starts the hexagram generation process
-    time_dict = get_process_time()
+    time_dict = {
+        "iching": {
+            "month": {"branch": month_branch},
+            "day": {"stem": day_stem, "branch": day_branch},
+        },
+    }
 
     # Manually change RI GAN
 
     # Manual first hexagram
     first_hexagram_index = first_index
-    with open("../data/index_to_name.json", "r", encoding="utf-8") as infile:
-        index_to_name = json.load(infile)
     first_hexagram_name = index_to_name[str(first_hexagram_index)]
     first_details = get_lines_details(
         first_hexagram_index,

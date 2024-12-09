@@ -6,7 +6,7 @@ from hexagram_generator import (
     get_lines_details,
     retrieve_information,
     format_gua_info,
-    gua_attrs,
+    hexagram_attrs,
     get_alter_list,
 )
 
