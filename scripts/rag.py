@@ -10,7 +10,7 @@ from hexagram_generator import (
     get_alter_list,
 )
 
-df = pd.read_csv("../data/RAG_db_filtered.csv", sep="\t")
+df = pd.read_csv("../data/examples/RAG_db.csv", sep="\t")
 df["id"] = df["id"].astype(str)
 documents = list(df["Q"])
 all_ids = list(df["id"])
