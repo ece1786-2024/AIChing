@@ -10,7 +10,7 @@ To interpret a hexagram in the **I Ching** (Yijing) Six Yao divination system, f
 
 **1. Identify the Significator(Six Relations)**
 
-Determine the specific line (yao) within the hexagram that represents the subject of your inquiry. This line, known as the "Significator," corresponds to one of the Six Relations (六亲, Liùqīn): Parent, Sibling, Officer (or Ghost), Wealth, and Offspring. Accurately selecting the Significator is crucial, as an incorrect choice can lead to erroneous interpretations. 
+Determine the specific line (yao) within the hexagram that represents the subject of your inquiry. This line, known as the "Significator," corresponds to one of the Six Relations: Parent, Sibling, Demons, Wealth, and Offspring. Accurately selecting the Significator is crucial, as an incorrect choice can lead to erroneous interpretations. 
 
 **2. Assess the Strength of the Significator**
 
@@ -20,21 +20,21 @@ Evaluate the vitality and influence of the Significator by considering:
 
 - **Changed vs. Static Lines**: If the Significator is an changing line, which can change and exert influence, or a static line, which is more passive.
 
-- **Interactions with Other Lines**: Examine how other lines in the hexagram interact with the Significator, identifying aspects of support (生, shēng), restriction (克, kè), clash (冲, chōng), or combination (合, hé).
+- **Interactions with Other Lines**: Examine how other lines in the hexagram interact with the Significator, identifying aspects of support, restriction, clash, or combination.
 
-This comprehensive analysis helps determine whether the Significator is in a state of prosperity (旺, wàng) or decline (衰, shuāi). 
+This comprehensive analysis helps determine whether the Significator is in a state of prosperity or decline. 
 
-**3. Analyze the Shi (世爻, Shìyáo) and Ying Lines (应爻, Yìngyáo)**
+**3. Analyze the Shi and Ying Lines **
 
 The Self line represents the querent or the subject matter, while the Opponent line signifies others or external factors. Assessing the relationship between these lines provides insights into potential outcomes and dynamics. 
 
 **4. Evaluate the Overall Hexagram Image**
 
-Consider the primary (主卦, Zhǔguà) and transformed hexagrams (变卦, Biànguà) to determine the general auspiciousness:
+Consider the primary and changed hexagrams to determine the general auspiciousness:
 
-- **Six Harmony Hexagram (六合卦, Liùhé Guà)**: Indicates harmony and favorable conditions.
+- **Six Harmony Hexagram **: Indicates harmony and favorable conditions.
 
-- **Six Clash Hexagram (六冲卦, Liùchōng Guà)**: Suggests conflict and instability.
+- **Six Clash Hexagram**: Suggests conflict and instability.
 
 For instance, if the primary hexagram is a Six Clash and the transformed hexagram is a Six Harmony, it implies initial difficulties followed by favorable outcomes, and vice versa. 
 

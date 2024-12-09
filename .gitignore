@@ -1,0 +1,5 @@
+data/scoring/*
+data/scoring_interp/*
+data/scoring_simplified/*
+*.db
+*.pyc
